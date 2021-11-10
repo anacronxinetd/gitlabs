@@ -1,0 +1,957 @@
+Nov 10 09:06:46 ip-172-31-24-32 journal: Runtime journal is using 8.0M (max allowed 393.6M, trying to leave 590.5M free of 3.8G available → current limit 393.6M).
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Linux version 4.14.248-189.473.amzn2.x86_64 (mockbuild@ip-10-0-52-217) (gcc version 7.3.1 20180712 (Red Hat 7.3.1-13) (GCC)) #1 SMP Mon Sep 27 05:52:26 UTC 2021
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Command line: BOOT_IMAGE=/boot/vmlinuz-4.14.248-189.473.amzn2.x86_64 root=UUID=f22063bb-28ab-42bc-ba62-b9130b861ee7 ro console=tty0 console=ttyS0,115200n8 net.ifnames=0 biosdevname=0 nvme_core.io_timeout=4294967295 rd.emergency=poweroff rd.shell=0
+Nov 10 09:06:46 ip-172-31-24-32 kernel: x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+Nov 10 09:06:46 ip-172-31-24-32 kernel: x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+Nov 10 09:06:46 ip-172-31-24-32 kernel: x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+Nov 10 09:06:46 ip-172-31-24-32 kernel: x86/fpu: Supporting XSAVE feature 0x008: 'MPX bounds registers'
+Nov 10 09:06:46 ip-172-31-24-32 kernel: x86/fpu: Supporting XSAVE feature 0x010: 'MPX CSR'
+Nov 10 09:06:46 ip-172-31-24-32 kernel: x86/fpu: Supporting XSAVE feature 0x020: 'AVX-512 opmask'
+Nov 10 09:06:46 ip-172-31-24-32 kernel: x86/fpu: Supporting XSAVE feature 0x040: 'AVX-512 Hi256'
+Nov 10 09:06:46 ip-172-31-24-32 kernel: x86/fpu: Supporting XSAVE feature 0x080: 'AVX-512 ZMM_Hi256'
+Nov 10 09:06:46 ip-172-31-24-32 kernel: x86/fpu: Supporting XSAVE feature 0x200: 'Protection Keys User registers'
+Nov 10 09:06:46 ip-172-31-24-32 kernel: x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+Nov 10 09:06:46 ip-172-31-24-32 kernel: x86/fpu: xstate_offset[3]:  832, xstate_sizes[3]:   64
+Nov 10 09:06:46 ip-172-31-24-32 kernel: x86/fpu: xstate_offset[4]:  896, xstate_sizes[4]:   64
+Nov 10 09:06:46 ip-172-31-24-32 kernel: x86/fpu: xstate_offset[5]:  960, xstate_sizes[5]:   64
+Nov 10 09:06:46 ip-172-31-24-32 kernel: x86/fpu: xstate_offset[6]: 1024, xstate_sizes[6]:  512
+Nov 10 09:06:46 ip-172-31-24-32 kernel: x86/fpu: xstate_offset[7]: 1536, xstate_sizes[7]: 1024
+Nov 10 09:06:46 ip-172-31-24-32 kernel: x86/fpu: xstate_offset[9]: 2560, xstate_sizes[9]:    8
+Nov 10 09:06:46 ip-172-31-24-32 kernel: x86/fpu: Enabled xstate features 0x2ff, context size is 2568 bytes, using 'compacted' format.
+Nov 10 09:06:46 ip-172-31-24-32 kernel: e820: BIOS-provided physical RAM map:
+Nov 10 09:06:46 ip-172-31-24-32 kernel: BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+Nov 10 09:06:46 ip-172-31-24-32 kernel: BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+Nov 10 09:06:46 ip-172-31-24-32 kernel: BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+Nov 10 09:06:46 ip-172-31-24-32 kernel: BIOS-e820: [mem 0x0000000000100000-0x00000000bffe9fff] usable
+Nov 10 09:06:46 ip-172-31-24-32 kernel: BIOS-e820: [mem 0x00000000bffea000-0x00000000bfffffff] reserved
+Nov 10 09:06:46 ip-172-31-24-32 kernel: BIOS-e820: [mem 0x00000000e0000000-0x00000000e03fffff] reserved
+Nov 10 09:06:46 ip-172-31-24-32 kernel: BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+Nov 10 09:06:46 ip-172-31-24-32 kernel: BIOS-e820: [mem 0x0000000100000000-0x00000002399fffff] usable
+Nov 10 09:06:46 ip-172-31-24-32 kernel: BIOS-e820: [mem 0x0000000239a00000-0x000000023fffffff] reserved
+Nov 10 09:06:46 ip-172-31-24-32 kernel: NX (Execute Disable) protection: active
+Nov 10 09:06:46 ip-172-31-24-32 kernel: SMBIOS 2.7 present.
+Nov 10 09:06:46 ip-172-31-24-32 kernel: DMI: Amazon EC2 t3.large/, BIOS 1.0 10/16/2017
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Hypervisor detected: KVM
+Nov 10 09:06:46 ip-172-31-24-32 kernel: tsc: Fast TSC calibration using PIT
+Nov 10 09:06:46 ip-172-31-24-32 kernel: e820: last_pfn = 0x239a00 max_arch_pfn = 0x400000000
+Nov 10 09:06:46 ip-172-31-24-32 kernel: x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WP  UC- WT  
+Nov 10 09:06:46 ip-172-31-24-32 kernel: e820: last_pfn = 0xbffea max_arch_pfn = 0x400000000
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Scanning 1 areas for low memory corruption
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Using GB pages for direct mapping
+Nov 10 09:06:46 ip-172-31-24-32 kernel: RAMDISK: [mem 0x362df000-0x37166fff]
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: Early table checksum verification disabled
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: RSDP 0x00000000000F8F40 000014 (v00 AMAZON)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: RSDT 0x00000000BFFEE350 000044 (v01 AMAZON AMZNRSDT 00000001 AMZN 00000001)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: FACP 0x00000000BFFEFF80 000074 (v01 AMAZON AMZNFACP 00000001 AMZN 00000001)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: DSDT 0x00000000BFFEE3A0 0010E9 (v01 AMAZON AMZNDSDT 00000001 AMZN 00000001)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: FACS 0x00000000BFFEFF40 000040
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: SSDT 0x00000000BFFEF6C0 00087A (v01 AMAZON AMZNSSDT 00000001 AMZN 00000001)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: APIC 0x00000000BFFEF5D0 000076 (v01 AMAZON AMZNAPIC 00000001 AMZN 00000001)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: SRAT 0x00000000BFFEF530 0000A0 (v01 AMAZON AMZNSRAT 00000001 AMZN 00000001)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: SLIT 0x00000000BFFEF4C0 00006C (v01 AMAZON AMZNSLIT 00000001 AMZN 00000001)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: WAET 0x00000000BFFEF490 000028 (v01 AMAZON AMZNWAET 00000001 AMZN 00000001)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: HPET 0x00000000000C9000 000038 (v01 AMAZON AMZNHPET 00000001 AMZN 00000001)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: SSDT 0x00000000000C9040 00007B (v01 AMAZON AMZNSSDT 00000001 AMZN 00000001)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: Reserving FACP table memory at [mem 0xbffeff80-0xbffefff3]
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: Reserving DSDT table memory at [mem 0xbffee3a0-0xbffef488]
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: Reserving FACS table memory at [mem 0xbffeff40-0xbffeff7f]
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: Reserving SSDT table memory at [mem 0xbffef6c0-0xbffeff39]
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: Reserving APIC table memory at [mem 0xbffef5d0-0xbffef645]
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: Reserving SRAT table memory at [mem 0xbffef530-0xbffef5cf]
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: Reserving SLIT table memory at [mem 0xbffef4c0-0xbffef52b]
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: Reserving WAET table memory at [mem 0xbffef490-0xbffef4b7]
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: Reserving HPET table memory at [mem 0xc9000-0xc9037]
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: Reserving SSDT table memory at [mem 0xc9040-0xc90ba]
+Nov 10 09:06:46 ip-172-31-24-32 kernel: SRAT: PXM 0 -> APIC 0x00 -> Node 0
+Nov 10 09:06:46 ip-172-31-24-32 kernel: SRAT: PXM 0 -> APIC 0x01 -> Node 0
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: SRAT: Node 0 PXM 0 [mem 0x00000000-0xbfffffff]
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: SRAT: Node 0 PXM 0 [mem 0x100000000-0x23fffffff]
+Nov 10 09:06:46 ip-172-31-24-32 kernel: NUMA: Node 0 [mem 0x00000000-0xbfffffff] + [mem 0x100000000-0x2399fffff] -> [mem 0x00000000-0x2399fffff]
+Nov 10 09:06:46 ip-172-31-24-32 kernel: NODE_DATA(0) allocated [mem 0x2399db000-0x2399fcfff]
+Nov 10 09:06:46 ip-172-31-24-32 kernel: kvm-clock: Using msrs 4b564d01 and 4b564d00
+Nov 10 09:06:46 ip-172-31-24-32 kernel: kvm-clock: cpu 0, msr 2:3995b001, primary cpu clock
+Nov 10 09:06:46 ip-172-31-24-32 kernel: kvm-clock: using sched offset of 3654218465 cycles
+Nov 10 09:06:46 ip-172-31-24-32 kernel: clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Zone ranges:
+Nov 10 09:06:46 ip-172-31-24-32 kernel:  DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+Nov 10 09:06:46 ip-172-31-24-32 kernel:  DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+Nov 10 09:06:46 ip-172-31-24-32 kernel:  Normal   [mem 0x0000000100000000-0x00000002399fffff]
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Movable zone start for each node
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Early memory node ranges
+Nov 10 09:06:46 ip-172-31-24-32 kernel:  node   0: [mem 0x0000000000001000-0x000000000009efff]
+Nov 10 09:06:46 ip-172-31-24-32 kernel:  node   0: [mem 0x0000000000100000-0x00000000bffe9fff]
+Nov 10 09:06:46 ip-172-31-24-32 kernel:  node   0: [mem 0x0000000100000000-0x00000002399fffff]
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Initmem setup node 0 [mem 0x0000000000001000-0x00000002399fffff]
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: PM-Timer IO Port: 0xb008
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: LAPIC_NMI (acpi_id[0xff] dfl dfl lint[0x1])
+Nov 10 09:06:46 ip-172-31-24-32 kernel: IOAPIC[0]: apic_id 0, version 17, address 0xfec00000, GSI 0-23
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 5 global_irq 5 high level)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 10 global_irq 10 high level)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 11 global_irq 11 high level)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Using ACPI (MADT) for SMP configuration information
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: HPET id: 0x8086a201 base: 0xfed00000
+Nov 10 09:06:46 ip-172-31-24-32 kernel: TSC deadline timer available
+Nov 10 09:06:46 ip-172-31-24-32 kernel: smpboot: Allowing 2 CPUs, 0 hotplug CPUs
+Nov 10 09:06:46 ip-172-31-24-32 kernel: PM: Registered nosave memory: [mem 0x00000000-0x00000fff]
+Nov 10 09:06:46 ip-172-31-24-32 kernel: PM: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+Nov 10 09:06:46 ip-172-31-24-32 kernel: PM: Registered nosave memory: [mem 0x000a0000-0x000effff]
+Nov 10 09:06:46 ip-172-31-24-32 kernel: PM: Registered nosave memory: [mem 0x000f0000-0x000fffff]
+Nov 10 09:06:46 ip-172-31-24-32 kernel: PM: Registered nosave memory: [mem 0xbffea000-0xbfffffff]
+Nov 10 09:06:46 ip-172-31-24-32 kernel: PM: Registered nosave memory: [mem 0xc0000000-0xdfffffff]
+Nov 10 09:06:46 ip-172-31-24-32 kernel: PM: Registered nosave memory: [mem 0xe0000000-0xe03fffff]
+Nov 10 09:06:46 ip-172-31-24-32 kernel: PM: Registered nosave memory: [mem 0xe0400000-0xfffbffff]
+Nov 10 09:06:46 ip-172-31-24-32 kernel: PM: Registered nosave memory: [mem 0xfffc0000-0xffffffff]
+Nov 10 09:06:46 ip-172-31-24-32 kernel: e820: [mem 0xc0000000-0xdfffffff] available for PCI devices
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Booting paravirtualized kernel on KVM
+Nov 10 09:06:46 ip-172-31-24-32 kernel: clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645519600211568 ns
+Nov 10 09:06:46 ip-172-31-24-32 kernel: random: get_random_bytes called from start_kernel+0x94/0x4eb with crng_init=0
+Nov 10 09:06:46 ip-172-31-24-32 kernel: setup_percpu: NR_CPUS:8192 nr_cpumask_bits:2 nr_cpu_ids:2 nr_node_ids:1
+Nov 10 09:06:46 ip-172-31-24-32 kernel: percpu: Embedded 44 pages/cpu s141080 r8192 d30952 u1048576
+Nov 10 09:06:46 ip-172-31-24-32 kernel: KVM setup async PF for cpu 0
+Nov 10 09:06:46 ip-172-31-24-32 kernel: kvm-stealtime: cpu 0, msr 239616200
+Nov 10 09:06:46 ip-172-31-24-32 kernel: PV qspinlock hash table entries: 256 (order: 0, 4096 bytes)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Fallback order for Node 0: 0 
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Built 1 zonelists, mobility grouping on.  Total pages: 2038539
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Policy zone: Normal
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Kernel command line: BOOT_IMAGE=/boot/vmlinuz-4.14.248-189.473.amzn2.x86_64 root=UUID=f22063bb-28ab-42bc-ba62-b9130b861ee7 ro console=tty0 console=ttyS0,115200n8 net.ifnames=0 biosdevname=0 nvme_core.io_timeout=4294967295 rd.emergency=poweroff rd.shell=0
+Nov 10 09:06:46 ip-172-31-24-32 kernel: PID hash table entries: 4096 (order: 3, 32768 bytes)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Memory: 5264952K/8283680K available (10252K kernel code, 2149K rwdata, 3036K rodata, 2200K init, 4244K bss, 241076K reserved, 0K cma-reserved)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=2, Nodes=1
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Kernel/User page tables isolation: enabled
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ftrace: allocating 30138 entries in 118 pages
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Hierarchical RCU implementation.
+Nov 10 09:06:46 ip-172-31-24-32 kernel: #011RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=2.
+Nov 10 09:06:46 ip-172-31-24-32 kernel: RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=2
+Nov 10 09:06:46 ip-172-31-24-32 kernel: NR_IRQS: 524544, nr_irqs: 440, preallocated irqs: 16
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Console: colour VGA+ 80x25
+Nov 10 09:06:46 ip-172-31-24-32 kernel: console [tty0] enabled
+Nov 10 09:06:46 ip-172-31-24-32 kernel: console [ttyS0] enabled
+Nov 10 09:06:46 ip-172-31-24-32 kernel: clocksource: hpet: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 30580167144 ns
+Nov 10 09:06:46 ip-172-31-24-32 kernel: tsc: Detected 2500.004 MHz processor
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Calibrating delay loop (skipped) preset value.. 5000.00 BogoMIPS (lpj=10000016)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: pid_max: default: 32768 minimum: 301
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: Core revision 20170728
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: 3 ACPI AML tables successfully acquired and loaded
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Security Framework initialized
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Yama: becoming mindful.
+Nov 10 09:06:46 ip-172-31-24-32 kernel: SELinux:  Initializing.
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Dentry cache hash table entries: 1048576 (order: 11, 8388608 bytes)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Inode-cache hash table entries: 524288 (order: 10, 4194304 bytes)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Mount-cache hash table entries: 16384 (order: 5, 131072 bytes)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Mountpoint-cache hash table entries: 16384 (order: 5, 131072 bytes)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Last level iTLB entries: 4KB 64, 2MB 8, 4MB 8
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Last level dTLB entries: 4KB 64, 2MB 0, 4MB 0, 1GB 4
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Spectre V2 : Mitigation: Full generic retpoline
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Speculative Store Bypass: Vulnerable
+Nov 10 09:06:46 ip-172-31-24-32 kernel: TAA: Vulnerable: Clear CPU buffers attempted, no microcode
+Nov 10 09:06:46 ip-172-31-24-32 kernel: MDS: Vulnerable: Clear CPU buffers attempted, no microcode
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Freeing SMP alternatives memory: 28K
+Nov 10 09:06:46 ip-172-31-24-32 kernel: smpboot: Max logical packages: 2
+Nov 10 09:06:46 ip-172-31-24-32 kernel: x2apic enabled
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Switched APIC routing to physical x2apic.
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ..TIMER: vector=0x30 apic1=0 pin1=0 apic2=-1 pin2=-1
+Nov 10 09:06:46 ip-172-31-24-32 kernel: smpboot: CPU0: Intel(R) Xeon(R) Platinum 8175M CPU @ 2.50GHz (family: 0x6, model: 0x55, stepping: 0x4)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Performance Events: unsupported p6 CPU model 85 no PMU driver, software events only.
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Hierarchical SRCU implementation.
+Nov 10 09:06:46 ip-172-31-24-32 kernel: NMI watchdog: Perf event create on CPU 0 failed with -2
+Nov 10 09:06:46 ip-172-31-24-32 kernel: NMI watchdog: Perf NMI watchdog permanently disabled
+Nov 10 09:06:46 ip-172-31-24-32 kernel: smp: Bringing up secondary CPUs ...
+Nov 10 09:06:46 ip-172-31-24-32 kernel: x86: Booting SMP configuration:
+Nov 10 09:06:46 ip-172-31-24-32 kernel: .... node  #0, CPUs:      #1
+Nov 10 09:06:46 ip-172-31-24-32 kernel: kvm-clock: cpu 1, msr 2:3995b041, secondary cpu clock
+Nov 10 09:06:46 ip-172-31-24-32 kernel: KVM setup async PF for cpu 1
+Nov 10 09:06:46 ip-172-31-24-32 kernel: kvm-stealtime: cpu 1, msr 239716200
+Nov 10 09:06:46 ip-172-31-24-32 kernel: MDS CPU bug present and SMT on, data leak possible. See https://www.kernel.org/doc/html/latest/admin-guide/hw-vuln/mds.html for more details.
+Nov 10 09:06:46 ip-172-31-24-32 kernel: TAA CPU bug present and SMT on, data leak possible. See https://www.kernel.org/doc/html/latest/admin-guide/hw-vuln/tsx_async_abort.html for more details.
+Nov 10 09:06:46 ip-172-31-24-32 kernel: smp: Brought up 1 node, 2 CPUs
+Nov 10 09:06:46 ip-172-31-24-32 kernel: smpboot: Total of 2 processors activated (10000.01 BogoMIPS)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: node 0 initialised, 694413 pages in 8ms
+Nov 10 09:06:46 ip-172-31-24-32 kernel: devtmpfs: initialized
+Nov 10 09:06:46 ip-172-31-24-32 kernel: x86/mm: Memory block size: 128MB
+Nov 10 09:06:46 ip-172-31-24-32 kernel: clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+Nov 10 09:06:46 ip-172-31-24-32 kernel: futex hash table entries: 512 (order: 3, 32768 bytes)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: NET: Registered protocol family 16
+Nov 10 09:06:46 ip-172-31-24-32 kernel: cpuidle: using governor ladder
+Nov 10 09:06:46 ip-172-31-24-32 kernel: cpuidle: using governor menu
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: bus type PCI registered
+Nov 10 09:06:46 ip-172-31-24-32 kernel: acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+Nov 10 09:06:46 ip-172-31-24-32 kernel: PCI: Using configuration type 1 for base access
+Nov 10 09:06:46 ip-172-31-24-32 kernel: HugeTLB registered 1.00 GiB page size, pre-allocated 0 pages
+Nov 10 09:06:46 ip-172-31-24-32 kernel: HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: Added _OSI(Module Device)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: Added _OSI(Processor Device)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: Added _OSI(3.0 _SCP Extensions)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: Added _OSI(Processor Aggregator Device)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: Interpreter enabled
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: (supports S0 S4 S5)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: Using IOAPIC for interrupt routing
+Nov 10 09:06:46 ip-172-31-24-32 kernel: PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: Enabled 16 GPEs in block 00 to 0F
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+Nov 10 09:06:46 ip-172-31-24-32 kernel: acpi PNP0A03:00: _OSC: OS supports [ASPM ClockPM Segments MSI]
+Nov 10 09:06:46 ip-172-31-24-32 kernel: acpi PNP0A03:00: _OSC failed (AE_NOT_FOUND); disabling ASPM
+Nov 10 09:06:46 ip-172-31-24-32 kernel: acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
+Nov 10 09:06:46 ip-172-31-24-32 kernel: acpiphp: Slot [3] registered
+Nov 10 09:06:46 ip-172-31-24-32 kernel: acpiphp: Slot [4] registered
+Nov 10 09:06:46 ip-172-31-24-32 kernel: acpiphp: Slot [5] registered
+Nov 10 09:06:46 ip-172-31-24-32 kernel: acpiphp: Slot [6] registered
+Nov 10 09:06:46 ip-172-31-24-32 kernel: acpiphp: Slot [7] registered
+Nov 10 09:06:46 ip-172-31-24-32 kernel: acpiphp: Slot [8] registered
+Nov 10 09:06:46 ip-172-31-24-32 kernel: acpiphp: Slot [9] registered
+Nov 10 09:06:46 ip-172-31-24-32 kernel: acpiphp: Slot [10] registered
+Nov 10 09:06:46 ip-172-31-24-32 kernel: acpiphp: Slot [11] registered
+Nov 10 09:06:46 ip-172-31-24-32 kernel: acpiphp: Slot [12] registered
+Nov 10 09:06:46 ip-172-31-24-32 kernel: acpiphp: Slot [13] registered
+Nov 10 09:06:46 ip-172-31-24-32 kernel: acpiphp: Slot [14] registered
+Nov 10 09:06:46 ip-172-31-24-32 kernel: acpiphp: Slot [15] registered
+Nov 10 09:06:46 ip-172-31-24-32 kernel: acpiphp: Slot [16] registered
+Nov 10 09:06:46 ip-172-31-24-32 kernel: acpiphp: Slot [17] registered
+Nov 10 09:06:46 ip-172-31-24-32 kernel: acpiphp: Slot [18] registered
+Nov 10 09:06:46 ip-172-31-24-32 kernel: acpiphp: Slot [19] registered
+Nov 10 09:06:46 ip-172-31-24-32 kernel: acpiphp: Slot [20] registered
+Nov 10 09:06:46 ip-172-31-24-32 kernel: acpiphp: Slot [21] registered
+Nov 10 09:06:46 ip-172-31-24-32 kernel: acpiphp: Slot [22] registered
+Nov 10 09:06:46 ip-172-31-24-32 kernel: acpiphp: Slot [23] registered
+Nov 10 09:06:46 ip-172-31-24-32 kernel: acpiphp: Slot [24] registered
+Nov 10 09:06:46 ip-172-31-24-32 kernel: acpiphp: Slot [25] registered
+Nov 10 09:06:46 ip-172-31-24-32 kernel: acpiphp: Slot [26] registered
+Nov 10 09:06:46 ip-172-31-24-32 kernel: acpiphp: Slot [27] registered
+Nov 10 09:06:46 ip-172-31-24-32 kernel: acpiphp: Slot [28] registered
+Nov 10 09:06:46 ip-172-31-24-32 kernel: acpiphp: Slot [29] registered
+Nov 10 09:06:46 ip-172-31-24-32 kernel: acpiphp: Slot [30] registered
+Nov 10 09:06:46 ip-172-31-24-32 kernel: acpiphp: Slot [31] registered
+Nov 10 09:06:46 ip-172-31-24-32 kernel: PCI host bridge to bus 0000:00
+Nov 10 09:06:46 ip-172-31-24-32 kernel: pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+Nov 10 09:06:46 ip-172-31-24-32 kernel: pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+Nov 10 09:06:46 ip-172-31-24-32 kernel: pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+Nov 10 09:06:46 ip-172-31-24-32 kernel: pci_bus 0000:00: root bus resource [mem 0xc0000000-0xfebfffff window]
+Nov 10 09:06:46 ip-172-31-24-32 kernel: pci_bus 0000:00: root bus resource [bus 00-ff]
+Nov 10 09:06:46 ip-172-31-24-32 kernel: pci 0000:00:01.3: quirk: [io  0xb000-0xb03f] claimed by PIIX4 ACPI
+Nov 10 09:06:46 ip-172-31-24-32 kernel: pci 0000:00:01.3: quirk: [io  0xb100-0xb10f] claimed by PIIX4 SMB
+Nov 10 09:06:46 ip-172-31-24-32 kernel: pci 0000:00:01.3: PIIX4 devres E PIO at fff0-ffff
+Nov 10 09:06:46 ip-172-31-24-32 kernel: pci 0000:00:01.3: PIIX4 devres F MMIO at ffc00000-ffffffff
+Nov 10 09:06:46 ip-172-31-24-32 kernel: pci 0000:00:01.3: PIIX4 devres G PIO at fff0-ffff
+Nov 10 09:06:46 ip-172-31-24-32 kernel: pci 0000:00:01.3: PIIX4 devres H MMIO at ffc00000-ffffffff
+Nov 10 09:06:46 ip-172-31-24-32 kernel: pci 0000:00:01.3: PIIX4 devres I PIO at fff0-ffff
+Nov 10 09:06:46 ip-172-31-24-32 kernel: pci 0000:00:01.3: PIIX4 devres J PIO at fff0-ffff
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: PCI Interrupt Link [LNKA] (IRQs 5 *10 11)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: PCI Interrupt Link [LNKB] (IRQs 5 *10 11)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: PCI Interrupt Link [LNKC] (IRQs 5 10 *11)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: PCI Interrupt Link [LNKD] (IRQs 5 10 *11)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: PCI Interrupt Link [LNKS] (IRQs *9)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: pci 0000:00:03.0: vgaarb: setting as boot VGA device
+Nov 10 09:06:46 ip-172-31-24-32 kernel: pci 0000:00:03.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+Nov 10 09:06:46 ip-172-31-24-32 kernel: pci 0000:00:03.0: vgaarb: bridge control possible
+Nov 10 09:06:46 ip-172-31-24-32 kernel: vgaarb: loaded
+Nov 10 09:06:46 ip-172-31-24-32 kernel: EDAC MC: Ver: 3.0.0
+Nov 10 09:06:46 ip-172-31-24-32 kernel: PCI: Using ACPI for IRQ routing
+Nov 10 09:06:46 ip-172-31-24-32 kernel: NetLabel: Initializing
+Nov 10 09:06:46 ip-172-31-24-32 kernel: NetLabel:  domain hash size = 128
+Nov 10 09:06:46 ip-172-31-24-32 kernel: NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+Nov 10 09:06:46 ip-172-31-24-32 kernel: NetLabel:  unlabeled traffic allowed by default
+Nov 10 09:06:46 ip-172-31-24-32 kernel: hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0, 0, 0, 0, 0, 0
+Nov 10 09:06:46 ip-172-31-24-32 kernel: hpet0: 8 comparators, 32-bit 62.500000 MHz counter
+Nov 10 09:06:46 ip-172-31-24-32 kernel: clocksource: Switched to clocksource kvm-clock
+Nov 10 09:06:46 ip-172-31-24-32 kernel: VFS: Disk quotas dquot_6.6.0
+Nov 10 09:06:46 ip-172-31-24-32 kernel: VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: pnp: PnP ACPI init
+Nov 10 09:06:46 ip-172-31-24-32 kernel: pnp: PnP ACPI: found 5 devices
+Nov 10 09:06:46 ip-172-31-24-32 kernel: clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+Nov 10 09:06:46 ip-172-31-24-32 kernel: NET: Registered protocol family 2
+Nov 10 09:06:46 ip-172-31-24-32 kernel: IP idents hash table entries: 131072 (order: 8, 1048576 bytes)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: TCP established hash table entries: 65536 (order: 7, 524288 bytes)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: TCP bind hash table entries: 65536 (order: 8, 1048576 bytes)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: TCP: Hash tables configured (established 65536 bind 65536)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: UDP hash table entries: 4096 (order: 5, 131072 bytes)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: UDP-Lite hash table entries: 4096 (order: 5, 131072 bytes)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: NET: Registered protocol family 1
+Nov 10 09:06:46 ip-172-31-24-32 kernel: pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+Nov 10 09:06:46 ip-172-31-24-32 kernel: pci 0000:00:01.0: Activating ISA DMA hang workarounds
+Nov 10 09:06:46 ip-172-31-24-32 kernel: pci 0000:00:03.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Unpacking initramfs...
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Freeing initrd memory: 14880K
+Nov 10 09:06:46 ip-172-31-24-32 kernel: PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: software IO TLB: mapped [mem 0xbbfea000-0xbffea000] (64MB)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x24093d6e846, max_idle_ns: 440795249997 ns
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Scanning for low memory corruption every 60 seconds
+Nov 10 09:06:46 ip-172-31-24-32 kernel: audit: initializing netlink subsys (disabled)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: audit: type=2000 audit(1636535206.008:1): state=initialized audit_enabled=0 res=1
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Initialise system trusted keyrings
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Key type blacklist registered
+Nov 10 09:06:46 ip-172-31-24-32 kernel: workingset: timestamp_bits=36 max_order=21 bucket_order=0
+Nov 10 09:06:46 ip-172-31-24-32 kernel: zbud: loaded
+Nov 10 09:06:46 ip-172-31-24-32 kernel: SGI XFS with ACLs, security attributes, no debug enabled
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Key type asymmetric registered
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Asymmetric key parser 'x509' registered
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Block layer SCSI generic (bsg) driver version 0.4 loaded (major 251)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: io scheduler noop registered (default)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: io scheduler cfq registered
+Nov 10 09:06:46 ip-172-31-24-32 kernel: crc32: CRC_LE_BITS = 64, CRC_BE BITS = 64
+Nov 10 09:06:46 ip-172-31-24-32 kernel: crc32: self tests passed, processed 225944 bytes in 131479 nsec
+Nov 10 09:06:46 ip-172-31-24-32 kernel: crc32c: CRC_LE_BITS = 64
+Nov 10 09:06:46 ip-172-31-24-32 kernel: crc32c: self tests passed, processed 225944 bytes in 65827 nsec
+Nov 10 09:06:46 ip-172-31-24-32 kernel: crc32_combine: 8373 self tests passed
+Nov 10 09:06:46 ip-172-31-24-32 kernel: crc32c_combine: 8373 self tests passed
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Serial: 8250/16550 driver, 4 ports, IRQ sharing disabled
+Nov 10 09:06:46 ip-172-31-24-32 kernel: 00:04: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+Nov 10 09:06:46 ip-172-31-24-32 kernel: nvme nvme0: pci function 0000:00:04.0
+Nov 10 09:06:46 ip-172-31-24-32 kernel: i8042: PNP: PS/2 Controller [PNP0303:KBD,PNP0f13:MOU] at 0x60,0x64 irq 1,12
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ACPI: PCI Interrupt Link [LNKD] enabled at IRQ 11
+Nov 10 09:06:46 ip-172-31-24-32 kernel: i8042: Warning: Keylock active
+Nov 10 09:06:46 ip-172-31-24-32 kernel: serio: i8042 KBD port at 0x60,0x64 irq 1
+Nov 10 09:06:46 ip-172-31-24-32 kernel: serio: i8042 AUX port at 0x60,0x64 irq 12
+Nov 10 09:06:46 ip-172-31-24-32 kernel: rtc_cmos 00:00: RTC can wake from S4
+Nov 10 09:06:46 ip-172-31-24-32 kernel: rtc_cmos 00:00: rtc core: registered rtc_cmos as rtc0
+Nov 10 09:06:46 ip-172-31-24-32 kernel: rtc_cmos 00:00: alarms up to one day, 114 bytes nvram
+Nov 10 09:06:46 ip-172-31-24-32 kernel: hidraw: raw HID events driver (C) Jiri Kosina
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ip_tables: (C) 2000-2006 Netfilter Core Team
+Nov 10 09:06:46 ip-172-31-24-32 kernel: NET: Registered protocol family 10
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Segment Routing with IPv6
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ip6_tables: (C) 2000-2006 Netfilter Core Team
+Nov 10 09:06:46 ip-172-31-24-32 kernel: NET: Registered protocol family 17
+Nov 10 09:06:46 ip-172-31-24-32 kernel: mce: Using 32 MCE banks
+Nov 10 09:06:46 ip-172-31-24-32 kernel: sched_clock: Marking stable (936454455, 0)->(2115832721, -1179378266)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: registered taskstats version 1
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Loading compiled-in X.509 certificates
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Loaded X.509 cert 'Build time autogenerated kernel key: 8d493a1d1e153c1158cc5cc6e5a28b49b1294820'
+Nov 10 09:06:46 ip-172-31-24-32 kernel: zswap: loaded using pool lzo/zbud
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ima: No TPM chip found, activating TPM-bypass! (rc=-19)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: ima: Allocated hash algorithm: sha1
+Nov 10 09:06:46 ip-172-31-24-32 kernel: rtc_cmos 00:00: setting system clock to 2021-11-10 09:06:46 UTC (1636535206)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Freeing unused kernel memory: 2200K
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Write protecting the kernel read-only data: 16384k
+Nov 10 09:06:46 ip-172-31-24-32 kernel: nvme0n1: p1 p128
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Freeing unused kernel memory: 2016K
+Nov 10 09:06:46 ip-172-31-24-32 kernel: Freeing unused kernel memory: 1060K
+Nov 10 09:06:46 ip-172-31-24-32 systemd[1]: Inserted module 'autofs4'
+Nov 10 09:06:46 ip-172-31-24-32 kernel: random: systemd: uninitialized urandom read (16 bytes read)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: random: systemd: uninitialized urandom read (16 bytes read)
+Nov 10 09:06:46 ip-172-31-24-32 kernel: random: systemd: uninitialized urandom read (16 bytes read)
+Nov 10 09:06:46 ip-172-31-24-32 systemd[1]: systemd 219 running in system mode. (+PAM +AUDIT +SELINUX +IMA -APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 -SECCOMP +BLKID +ELFUTILS +KMOD +IDN)
+Nov 10 09:06:46 ip-172-31-24-32 systemd[1]: Detected virtualization amazon.
+Nov 10 09:06:46 ip-172-31-24-32 systemd[1]: Detected architecture x86-64.
+Nov 10 09:06:46 ip-172-31-24-32 systemd[1]: Running in initial RAM disk.
+Nov 10 09:06:46 ip-172-31-24-32 systemd[1]: No hostname configured.
+Nov 10 09:06:46 ip-172-31-24-32 systemd[1]: Set hostname to <localhost>.
+Nov 10 09:06:46 ip-172-31-24-32 systemd[1]: Initializing machine ID from VM UUID.
+Nov 10 09:06:46 ip-172-31-24-32 systemd[1]: Reached target Local File Systems.
+Nov 10 09:06:46 ip-172-31-24-32 systemd[1]: Reached target Swap.
+Nov 10 09:06:46 ip-172-31-24-32 systemd[1]: Reached target Timers.
+Nov 10 09:06:46 ip-172-31-24-32 journal: Journal started
+Nov 10 09:06:46 ip-172-31-24-32 systemd-udevd: starting version 219
+Nov 10 09:06:46 ip-172-31-24-32 systemd-udevd: Network interface NamePolicy= disabled on kernel command line, ignoring.
+Nov 10 09:06:46 ip-172-31-24-32 systemd: Started dracut pre-trigger hook.
+Nov 10 09:06:46 ip-172-31-24-32 systemd: Starting udev Coldplug all Devices...
+Nov 10 09:06:46 ip-172-31-24-32 systemd-udevd: Network interface NamePolicy= disabled on kernel command line, ignoring.
+Nov 10 09:06:46 ip-172-31-24-32 systemd: Started udev Coldplug all Devices.
+Nov 10 09:06:46 ip-172-31-24-32 systemd: Starting dracut initqueue hook...
+Nov 10 09:06:46 ip-172-31-24-32 systemd: Reached target System Initialization.
+Nov 10 09:06:46 ip-172-31-24-32 systemd: Reached target Basic System.
+Nov 10 09:06:46 ip-172-31-24-32 kernel: input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input0
+Nov 10 09:06:46 ip-172-31-24-32 systemd: Found device Amazon Elastic Block Store /.
+Nov 10 09:06:46 ip-172-31-24-32 kernel: random: fast init done
+Nov 10 09:06:46 ip-172-31-24-32 systemd: Starting File System Check on /dev/disk/by-uuid/f22063bb-28ab-42bc-ba62-b9130b861ee7...
+Nov 10 09:06:46 ip-172-31-24-32 systemd-fsck: fsck.xfs doesn't exist, not checking file system on /dev/disk/by-uuid/f22063bb-28ab-42bc-ba62-b9130b861ee7
+Nov 10 09:06:46 ip-172-31-24-32 systemd: Started File System Check on /dev/disk/by-uuid/f22063bb-28ab-42bc-ba62-b9130b861ee7.
+Nov 10 09:06:46 ip-172-31-24-32 systemd: Started dracut initqueue hook.
+Nov 10 09:06:46 ip-172-31-24-32 systemd: Reached target Remote File Systems (Pre).
+Nov 10 09:06:46 ip-172-31-24-32 systemd: Reached target Remote File Systems.
+Nov 10 09:06:46 ip-172-31-24-32 systemd: Mounting /sysroot...
+Nov 10 09:06:47 ip-172-31-24-32 kernel: XFS (nvme0n1p1): Mounting V5 Filesystem
+Nov 10 09:06:47 ip-172-31-24-32 systemd: Mounted /sysroot.
+Nov 10 09:06:47 ip-172-31-24-32 kernel: XFS (nvme0n1p1): Ending clean mount
+Nov 10 09:06:47 ip-172-31-24-32 systemd: Reached target Initrd Root File System.
+Nov 10 09:06:47 ip-172-31-24-32 systemd: Starting Reload Configuration from the Real Root...
+Nov 10 09:06:47 ip-172-31-24-32 systemd: Reloading.
+Nov 10 09:06:48 ip-172-31-24-32 systemd: Started Reload Configuration from the Real Root.
+Nov 10 09:06:48 ip-172-31-24-32 systemd: Reached target Initrd File Systems.
+Nov 10 09:06:48 ip-172-31-24-32 systemd: Reached target Initrd Default Target.
+Nov 10 09:06:48 ip-172-31-24-32 systemd: Starting dracut pre-pivot and cleanup hook...
+Nov 10 09:06:48 ip-172-31-24-32 systemd: Started dracut pre-pivot and cleanup hook.
+Nov 10 09:06:48 ip-172-31-24-32 systemd: Starting Cleaning Up and Shutting Down Daemons...
+Nov 10 09:06:48 ip-172-31-24-32 systemd: Stopped dracut pre-pivot and cleanup hook.
+Nov 10 09:06:48 ip-172-31-24-32 systemd: Stopped target Remote File Systems.
+Nov 10 09:06:48 ip-172-31-24-32 systemd: Stopped target Initrd Default Target.
+Nov 10 09:06:48 ip-172-31-24-32 systemd: Stopped target Basic System.
+Nov 10 09:06:48 ip-172-31-24-32 systemd: Stopped target Slices.
+Nov 10 09:06:48 ip-172-31-24-32 systemd: Stopped target Timers.
+Nov 10 09:06:48 ip-172-31-24-32 systemd: Stopped target Remote File Systems (Pre).
+Nov 10 09:06:48 ip-172-31-24-32 systemd: Stopped dracut initqueue hook.
+Nov 10 09:06:48 ip-172-31-24-32 systemd: Stopped target System Initialization.
+Nov 10 09:06:48 ip-172-31-24-32 systemd: Stopped Apply Kernel Variables.
+Nov 10 09:06:48 ip-172-31-24-32 systemd: Stopped target Swap.
+Nov 10 09:06:48 ip-172-31-24-32 systemd: Stopped target Local File Systems.
+Nov 10 09:06:48 ip-172-31-24-32 systemd: Stopped target Paths.
+Nov 10 09:06:48 ip-172-31-24-32 systemd: Stopped Dispatch Password Requests to Console Directory Watch.
+Nov 10 09:06:48 ip-172-31-24-32 systemd: Stopped target Sockets.
+Nov 10 09:06:48 ip-172-31-24-32 systemd: Stopped udev Coldplug all Devices.
+Nov 10 09:06:48 ip-172-31-24-32 systemd: Stopped dracut pre-trigger hook.
+Nov 10 09:06:48 ip-172-31-24-32 systemd: Stopping udev Kernel Device Manager...
+Nov 10 09:06:48 ip-172-31-24-32 systemd: Started Cleaning Up and Shutting Down Daemons.
+Nov 10 09:06:48 ip-172-31-24-32 systemd: Stopped udev Kernel Device Manager.
+Nov 10 09:06:48 ip-172-31-24-32 systemd: Stopped Create Static Device Nodes in /dev.
+Nov 10 09:06:48 ip-172-31-24-32 systemd: Stopped Create list of required static device nodes for the current kernel.
+Nov 10 09:06:48 ip-172-31-24-32 systemd: Closed udev Kernel Socket.
+Nov 10 09:06:48 ip-172-31-24-32 systemd: Closed udev Control Socket.
+Nov 10 09:06:48 ip-172-31-24-32 systemd: Starting Cleanup udevd DB...
+Nov 10 09:06:48 ip-172-31-24-32 systemd: Started Cleanup udevd DB.
+Nov 10 09:06:48 ip-172-31-24-32 systemd: Reached target Switch Root.
+Nov 10 09:06:48 ip-172-31-24-32 systemd: Starting Switch Root...
+Nov 10 09:06:48 ip-172-31-24-32 systemd: Switching root.
+Nov 10 09:06:48 ip-172-31-24-32 journal: Journal stopped
+Nov 10 09:06:49 ip-172-31-24-32 journal: Runtime journal is using 8.0M (max allowed 393.6M, trying to leave 590.5M free of 3.8G available → current limit 393.6M).
+Nov 10 09:06:49 ip-172-31-24-32 systemd-journald[708]: Received SIGTERM from PID 1 (systemd).
+Nov 10 09:06:49 ip-172-31-24-32 kernel: systemd: 20 output lines suppressed due to ratelimiting
+Nov 10 09:06:49 ip-172-31-24-32 kernel: SELinux:  Disabled at runtime.
+Nov 10 09:06:49 ip-172-31-24-32 kernel: audit: type=1404 audit(1636535208.752:2): selinux=0 auid=4294967295 ses=4294967295
+Nov 10 09:06:49 ip-172-31-24-32 journal: Journal started
+Nov 10 09:06:49 ip-172-31-24-32 systemd: systemd 219 running in system mode. (+PAM +AUDIT +SELINUX +IMA -APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 -SECCOMP +BLKID +ELFUTILS +KMOD +IDN)
+Nov 10 09:06:49 ip-172-31-24-32 systemd: Detected virtualization amazon.
+Nov 10 09:06:49 ip-172-31-24-32 systemd: Detected architecture x86-64.
+Nov 10 09:06:49 ip-172-31-24-32 systemd: Cannot add dependency job for unit display-manager.service, ignoring: Unit not found.
+Nov 10 09:06:49 ip-172-31-24-32 systemd: Started Remount Root and Kernel File Systems.
+Nov 10 09:06:49 ip-172-31-24-32 systemd: Started Setup Virtual Console.
+Nov 10 09:06:49 ip-172-31-24-32 systemd: Started Read and set NIS domainname from /etc/sysconfig/network.
+Nov 10 09:06:49 ip-172-31-24-32 systemd: Started Create list of required static device nodes for the current kernel.
+Nov 10 09:06:49 ip-172-31-24-32 systemd: Starting Create Static Device Nodes in /dev...
+Nov 10 09:06:49 ip-172-31-24-32 systemd: Starting Configure read-only root support...
+Nov 10 09:06:49 ip-172-31-24-32 systemd: Starting Load Kernel Modules...
+Nov 10 09:06:49 ip-172-31-24-32 systemd: Starting Rebuild Hardware Database...
+Nov 10 09:06:49 ip-172-31-24-32 systemd: Starting Flush Journal to Persistent Storage...
+Nov 10 09:06:49 ip-172-31-24-32 systemd: Started LVM2 metadata daemon.
+Nov 10 09:06:49 ip-172-31-24-32 systemd: Started Configure read-only root support.
+Nov 10 09:06:49 ip-172-31-24-32 systemd: Starting Load/Save Random Seed...
+Nov 10 09:06:49 ip-172-31-24-32 systemd: Started Load/Save Random Seed.
+Nov 10 09:06:49 ip-172-31-24-32 journal: Permanent journal is using 8.0M (max allowed 818.0M, trying to leave 1.1G free of 6.7G available → current limit 818.0M).
+Nov 10 09:06:49 ip-172-31-24-32 journal: Time spent on flushing to /var is 10.495ms for 490 entries.
+Nov 10 09:06:50 ip-172-31-24-32 kernel: ena 0000:00:05.0: Elastic Network Adapter (ENA) v2.5.0g
+Nov 10 09:06:50 ip-172-31-24-32 kernel: ena 0000:00:05.0: ENA device version: 0.10
+Nov 10 09:06:50 ip-172-31-24-32 kernel: ena 0000:00:05.0: ENA controller version: 0.0.1 implementation version 1
+Nov 10 09:06:50 ip-172-31-24-32 systemd: Started Create Static Device Nodes in /dev.
+Nov 10 09:06:50 ip-172-31-24-32 systemd: Starting udev Kernel Device Manager...
+Nov 10 09:06:50 ip-172-31-24-32 systemd-udevd: starting version 219
+Nov 10 09:06:50 ip-172-31-24-32 systemd-udevd: Network interface NamePolicy= disabled on kernel command line, ignoring.
+Nov 10 09:06:50 ip-172-31-24-32 systemd: Started Flush Journal to Persistent Storage.
+Nov 10 09:06:50 ip-172-31-24-32 kernel: ena 0000:00:05.0: LLQ is not supported Fallback to host mode policy.
+Nov 10 09:06:50 ip-172-31-24-32 systemd-modules-load: Inserted module 'ena'
+Nov 10 09:06:50 ip-172-31-24-32 systemd: Started Load Kernel Modules.
+Nov 10 09:06:50 ip-172-31-24-32 kernel: ena 0000:00:05.0: Elastic Network Adapter (ENA) found at mem febf4000, mac addr 06:9e:f0:c4:30:6b
+Nov 10 09:06:50 ip-172-31-24-32 systemd: Starting Apply Kernel Variables...
+Nov 10 09:06:50 ip-172-31-24-32 systemd: Started udev Kernel Device Manager.
+Nov 10 09:06:50 ip-172-31-24-32 systemd: Started Apply Kernel Variables.
+Nov 10 09:06:50 ip-172-31-24-32 systemd: Created slice system-ec2net\x2difup.slice.
+Nov 10 09:06:50 ip-172-31-24-32 systemd: Started Rebuild Hardware Database.
+Nov 10 09:06:50 ip-172-31-24-32 systemd: Starting udev Coldplug all Devices...
+Nov 10 09:06:50 ip-172-31-24-32 systemd: Started udev Coldplug all Devices.
+Nov 10 09:06:50 ip-172-31-24-32 kernel: input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input3
+Nov 10 09:06:50 ip-172-31-24-32 systemd: Starting udev Wait for Complete Device Initialization...
+Nov 10 09:06:50 ip-172-31-24-32 systemd: Starting Show Plymouth Boot Screen...
+Nov 10 09:06:50 ip-172-31-24-32 kernel: ACPI: Power Button [PWRF]
+Nov 10 09:06:50 ip-172-31-24-32 kernel: input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input4
+Nov 10 09:06:50 ip-172-31-24-32 kernel: ACPI: Sleep Button [SLPF]
+Nov 10 09:06:50 ip-172-31-24-32 systemd: Found device /dev/ttyS0.
+Nov 10 09:06:50 ip-172-31-24-32 kernel: input: ImPS/2 Generic Wheel Mouse as /devices/platform/i8042/serio1/input/input5
+Nov 10 09:06:50 ip-172-31-24-32 kernel: mousedev: PS/2 mouse device common for all mice
+Nov 10 09:06:50 ip-172-31-24-32 systemd: Received SIGRTMIN+20 from PID 1644 (plymouthd).
+Nov 10 09:06:50 ip-172-31-24-32 systemd: Started Show Plymouth Boot Screen.
+Nov 10 09:06:50 ip-172-31-24-32 systemd: Started Forward Password Requests to Plymouth Directory Watch.
+Nov 10 09:06:50 ip-172-31-24-32 kernel: AVX2 version of gcm_enc/dec engaged.
+Nov 10 09:06:50 ip-172-31-24-32 kernel: AES CTR mode by8 optimization enabled
+Nov 10 09:06:50 ip-172-31-24-32 kernel: alg: No test for pcbc(aes) (pcbc-aes-aesni)
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Started udev Wait for Complete Device Initialization.
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Starting Activation of DM RAID sets...
+Nov 10 09:06:51 ip-172-31-24-32 kernel: device-mapper: uevent: version 1.0.3
+Nov 10 09:06:51 ip-172-31-24-32 kernel: device-mapper: ioctl: 4.37.0-ioctl (2017-09-20) initialised: dm-devel@redhat.com
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Started Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling.
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Reached target Local File Systems (Pre).
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Started Activation of DM RAID sets.
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Reached target Local Encrypted Volumes.
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Reached target Local File Systems.
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Starting Mark the need to relabel after reboot...
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Starting Rebuild Journal Catalog...
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Starting Create Volatile Files and Directories...
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Starting Preprocess NFS configuration...
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Starting Tell Plymouth To Write Out Runtime Data...
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Started Preprocess NFS configuration.
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Started Create Volatile Files and Directories.
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Started Mark the need to relabel after reboot.
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Starting Security Auditing Service...
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Mounting RPC Pipe File System...
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Started Rebuild Journal Catalog.
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Starting Update is Completed...
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Started Update is Completed.
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Started Tell Plymouth To Write Out Runtime Data.
+Nov 10 09:06:51 ip-172-31-24-32 kernel: RPC: Registered named UNIX socket transport module.
+Nov 10 09:06:51 ip-172-31-24-32 kernel: RPC: Registered udp transport module.
+Nov 10 09:06:51 ip-172-31-24-32 kernel: RPC: Registered tcp transport module.
+Nov 10 09:06:51 ip-172-31-24-32 kernel: RPC: Registered tcp NFSv4.1 backchannel transport module.
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Mounted RPC Pipe File System.
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Reached target rpc_pipefs.target.
+Nov 10 09:06:51 ip-172-31-24-32 auditd[1776]: Started dispatcher: /sbin/audispd pid: 1778
+Nov 10 09:06:51 ip-172-31-24-32 auditd[1776]: Init complete, auditd 2.8.1 listening for events (startup state enable)
+Nov 10 09:06:51 ip-172-31-24-32 audispd: No plugins found, exiting
+Nov 10 09:06:51 ip-172-31-24-32 augenrules: No rules
+Nov 10 09:06:51 ip-172-31-24-32 augenrules: enabled 1
+Nov 10 09:06:51 ip-172-31-24-32 augenrules: failure 1
+Nov 10 09:06:51 ip-172-31-24-32 augenrules: pid 1776
+Nov 10 09:06:51 ip-172-31-24-32 augenrules: rate_limit 0
+Nov 10 09:06:51 ip-172-31-24-32 augenrules: backlog_limit 8192
+Nov 10 09:06:51 ip-172-31-24-32 augenrules: lost 0
+Nov 10 09:06:51 ip-172-31-24-32 augenrules: backlog 0
+Nov 10 09:06:51 ip-172-31-24-32 augenrules: backlog_wait_time 15000
+Nov 10 09:06:51 ip-172-31-24-32 augenrules: enabled 1
+Nov 10 09:06:51 ip-172-31-24-32 augenrules: failure 1
+Nov 10 09:06:51 ip-172-31-24-32 augenrules: pid 1776
+Nov 10 09:06:51 ip-172-31-24-32 augenrules: rate_limit 0
+Nov 10 09:06:51 ip-172-31-24-32 augenrules: backlog_limit 8192
+Nov 10 09:06:51 ip-172-31-24-32 augenrules: lost 0
+Nov 10 09:06:51 ip-172-31-24-32 augenrules: backlog 0
+Nov 10 09:06:51 ip-172-31-24-32 augenrules: backlog_wait_time 15000
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Started Security Auditing Service.
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Starting Update UTMP about System Boot/Shutdown...
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Started Update UTMP about System Boot/Shutdown.
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Reached target System Initialization.
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Started Flexible branding.
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Reached target Paths.
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Listening on RPCbind Server Activation Socket.
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Starting RPC bind service...
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Started Daily Cleanup of Temporary Directories.
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Reached target Timers.
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Listening on D-Bus System Message Bus Socket.
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Reached target Sockets.
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Reached target Basic System.
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Starting Hardware RNG Entropy Gatherer Wake threshold service...
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Started irqbalance daemon.
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Starting Initial cloud-init job (pre-networking)...
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Starting GSSAPI Proxy Daemon...
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Starting Resets System Activity Logs...
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Starting Dump dmesg to /var/log/dmesg...
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Starting ACPI Event Daemon...
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Started libstoragemgmt plug-in server daemon.
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Starting NTP client/server...
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Started D-Bus System Message Bus.
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Starting Login Service...
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Started RPC bind service.
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Started Hardware RNG Entropy Gatherer Wake threshold service.
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Started Resets System Activity Logs.
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Started Dump dmesg to /var/log/dmesg.
+Nov 10 09:06:51 ip-172-31-24-32 acpid: starting up with netlink and the input layer
+Nov 10 09:06:51 ip-172-31-24-32 acpid: skipping incomplete file /etc/acpi/events/videoconf
+Nov 10 09:06:51 ip-172-31-24-32 chronyd[1826]: chronyd version 4.0 starting (+CMDMON +NTP +REFCLOCK +RTC +PRIVDROP +SCFILTER +SIGND +ASYNCDNS -NTS +SECHASH +IPV6 +DEBUG)
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Started ACPI Event Daemon.
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Started Hardware RNG Entropy Gatherer Daemon.
+Nov 10 09:06:51 ip-172-31-24-32 acpid: 2 rules loaded
+Nov 10 09:06:51 ip-172-31-24-32 acpid: waiting for events: event logging is off
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Started NTP client/server.
+Nov 10 09:06:51 ip-172-31-24-32 systemd: Started Login Service.
+Nov 10 09:06:51 ip-172-31-24-32 systemd-logind: New seat seat0.
+Nov 10 09:06:52 ip-172-31-24-32 rngd: Disabling 5: JITTER Entropy generator (jitter)
+Nov 10 09:06:52 ip-172-31-24-32 rngd: Initializing available sources
+Nov 10 09:06:52 ip-172-31-24-32 rngd: Failed to init entropy source hwrng
+Nov 10 09:06:52 ip-172-31-24-32 rngd: Enabling RDSEED rng support
+Nov 10 09:06:52 ip-172-31-24-32 rngd: Initializing entropy source rdrand
+Nov 10 09:06:52 ip-172-31-24-32 kernel: random: crng init done
+Nov 10 09:06:52 ip-172-31-24-32 kernel: random: 7 urandom warning(s) missed due to ratelimiting
+Nov 10 09:06:52 ip-172-31-24-32 systemd: Started GSSAPI Proxy Daemon.
+Nov 10 09:06:52 ip-172-31-24-32 systemd: Reached target NFS client services.
+Nov 10 09:06:52 ip-172-31-24-32 systemd: Reached target Remote File Systems (Pre).
+Nov 10 09:06:52 ip-172-31-24-32 systemd: Reached target Remote File Systems.
+Nov 10 09:06:54 ip-172-31-24-32 cloud-init: Cloud-init v. 19.3-44.amzn2 running 'init-local' at Wed, 10 Nov 2021 09:06:54 +0000. Up 8.83 seconds.
+Nov 10 09:06:54 ip-172-31-24-32 systemd: Started Initial cloud-init job (pre-networking).
+Nov 10 09:06:54 ip-172-31-24-32 systemd: Reached target Network (Pre).
+Nov 10 09:06:54 ip-172-31-24-32 systemd: Starting LSB: Bring up/down networking...
+Nov 10 09:06:55 ip-172-31-24-32 network: Bringing up loopback interface:  /etc/sysconfig/network-scripts/ifup-post: line 54: /etc/resolv.conf: No such file or directory
+Nov 10 09:06:55 ip-172-31-24-32 network: /etc/sysconfig/network-scripts/ifup-post: line 119: /etc/resolv.conf: No such file or directory
+Nov 10 09:06:55 ip-172-31-24-32 network: cp: cannot stat '/etc/resolv.conf': No such file or directory
+Nov 10 09:06:55 ip-172-31-24-32 NET[1967]: /etc/sysconfig/network-scripts/ifup-post : updated /etc/resolv.conf
+Nov 10 09:06:55 ip-172-31-24-32 network: [  OK  ]
+Nov 10 09:06:55 ip-172-31-24-32 network: Bringing up interface eth0:
+Nov 10 09:06:55 ip-172-31-24-32 kernel: ena 0000:00:05.0 eth0: Local page cache is disabled for less than 16 channels
+Nov 10 09:06:55 ip-172-31-24-32 dhclient[1986]: DHCPDISCOVER on eth0 to 255.255.255.255 port 67 interval 5 (xid=0x312d99eb)
+Nov 10 09:06:55 ip-172-31-24-32 dhclient[1986]: DHCPREQUEST on eth0 to 255.255.255.255 port 67 (xid=0x312d99eb)
+Nov 10 09:06:55 ip-172-31-24-32 dhclient[1986]: DHCPOFFER from 172.31.16.1
+Nov 10 09:06:55 ip-172-31-24-32 dhclient[1986]: DHCPACK from 172.31.16.1 (xid=0x312d99eb)
+Nov 10 09:06:55 ip-172-31-24-32 NET[2030]: /usr/sbin/dhclient-script : updated /etc/resolv.conf
+Nov 10 09:06:55 ip-172-31-24-32 dhclient[1986]: bound to 172.31.24.32 -- renewal in 1517 seconds.
+Nov 10 09:06:55 ip-172-31-24-32 network: Determining IP information for eth0... done.
+Nov 10 09:06:55 ip-172-31-24-32 ec2net: [get_meta] Querying IMDS for meta-data/network/interfaces/macs/06:9e:f0:c4:30:6b/local-ipv4s
+Nov 10 09:06:55 ip-172-31-24-32 ec2net: [get_meta] Getting token for IMDSv2.
+Nov 10 09:06:55 ip-172-31-24-32 ec2net: [get_meta] Trying to get http://169.254.169.254/latest/meta-data/network/interfaces/macs/06:9e:f0:c4:30:6b/local-ipv4s
+Nov 10 09:06:55 ip-172-31-24-32 ec2net: [remove_aliases] Removing aliases of eth0
+Nov 10 09:06:55 ip-172-31-24-32 network: Determining IPv6 information for eth0... done.
+Nov 10 09:06:55 ip-172-31-24-32 network: [  OK  ]
+Nov 10 09:06:55 ip-172-31-24-32 systemd: Started LSB: Bring up/down networking.
+Nov 10 09:06:55 ip-172-31-24-32 systemd: Reached target Network.
+Nov 10 09:06:55 ip-172-31-24-32 systemd: Starting Postfix Mail Transport Agent...
+Nov 10 09:06:55 ip-172-31-24-32 systemd: Starting Initial cloud-init job (metadata service crawler)...
+Nov 10 09:06:56 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 1080ms.
+Nov 10 09:06:56 ip-172-31-24-32 cloud-init: Cloud-init v. 19.3-44.amzn2 running 'init' at Wed, 10 Nov 2021 09:06:56 +0000. Up 10.74 seconds.
+Nov 10 09:06:56 ip-172-31-24-32 cloud-init: ci-info: ++++++++++++++++++++++++++++++++++++++Net device info+++++++++++++++++++++++++++++++++++++++
+Nov 10 09:06:56 ip-172-31-24-32 cloud-init: ci-info: +--------+------+-----------------------------+---------------+--------+-------------------+
+Nov 10 09:06:56 ip-172-31-24-32 cloud-init: ci-info: | Device |  Up  |           Address           |      Mask     | Scope  |     Hw-Address    |
+Nov 10 09:06:56 ip-172-31-24-32 cloud-init: ci-info: +--------+------+-----------------------------+---------------+--------+-------------------+
+Nov 10 09:06:56 ip-172-31-24-32 cloud-init: ci-info: |  eth0  | True |         172.31.24.32        | 255.255.240.0 | global | 06:9e:f0:c4:30:6b |
+Nov 10 09:06:56 ip-172-31-24-32 cloud-init: ci-info: |  eth0  | True | fe80::49e:f0ff:fec4:306b/64 |       .       |  link  | 06:9e:f0:c4:30:6b |
+Nov 10 09:06:56 ip-172-31-24-32 cloud-init: ci-info: |   lo   | True |          127.0.0.1          |   255.0.0.0   |  host  |         .         |
+Nov 10 09:06:56 ip-172-31-24-32 cloud-init: ci-info: |   lo   | True |           ::1/128           |       .       |  host  |         .         |
+Nov 10 09:06:56 ip-172-31-24-32 cloud-init: ci-info: +--------+------+-----------------------------+---------------+--------+-------------------+
+Nov 10 09:06:56 ip-172-31-24-32 cloud-init: ci-info: ++++++++++++++++++++++++++++++++Route IPv4 info++++++++++++++++++++++++++++++++
+Nov 10 09:06:56 ip-172-31-24-32 cloud-init: ci-info: +-------+-----------------+-------------+-----------------+-----------+-------+
+Nov 10 09:06:56 ip-172-31-24-32 cloud-init: ci-info: | Route |   Destination   |   Gateway   |     Genmask     | Interface | Flags |
+Nov 10 09:06:56 ip-172-31-24-32 cloud-init: ci-info: +-------+-----------------+-------------+-----------------+-----------+-------+
+Nov 10 09:06:56 ip-172-31-24-32 cloud-init: ci-info: |   0   |     0.0.0.0     | 172.31.16.1 |     0.0.0.0     |    eth0   |   UG  |
+Nov 10 09:06:56 ip-172-31-24-32 cloud-init: ci-info: |   1   | 169.254.169.254 |   0.0.0.0   | 255.255.255.255 |    eth0   |   UH  |
+Nov 10 09:06:56 ip-172-31-24-32 cloud-init: ci-info: |   2   |   172.31.16.0   |   0.0.0.0   |  255.255.240.0  |    eth0   |   U   |
+Nov 10 09:06:56 ip-172-31-24-32 cloud-init: ci-info: +-------+-----------------+-------------+-----------------+-----------+-------+
+Nov 10 09:06:56 ip-172-31-24-32 cloud-init: ci-info: +++++++++++++++++++Route IPv6 info+++++++++++++++++++
+Nov 10 09:06:56 ip-172-31-24-32 cloud-init: ci-info: +-------+-------------+---------+-----------+-------+
+Nov 10 09:06:56 ip-172-31-24-32 cloud-init: ci-info: | Route | Destination | Gateway | Interface | Flags |
+Nov 10 09:06:56 ip-172-31-24-32 cloud-init: ci-info: +-------+-------------+---------+-----------+-------+
+Nov 10 09:06:56 ip-172-31-24-32 cloud-init: ci-info: |   9   |  fe80::/64  |    ::   |    eth0   |   U   |
+Nov 10 09:06:56 ip-172-31-24-32 cloud-init: ci-info: |   11  |    local    |    ::   |    eth0   |   U   |
+Nov 10 09:06:56 ip-172-31-24-32 cloud-init: ci-info: |   12  |   ff00::/8  |    ::   |    eth0   |   U   |
+Nov 10 09:06:56 ip-172-31-24-32 cloud-init: ci-info: +-------+-------------+---------+-----------+-------+
+Nov 10 09:06:57 ip-172-31-24-32 systemd: Started Postfix Mail Transport Agent.
+Nov 10 09:06:57 ip-172-31-24-32 dbus[1814]: [system] Activating via systemd: service name='org.freedesktop.hostname1' unit='dbus-org.freedesktop.hostname1.service'
+Nov 10 09:06:57 ip-172-31-24-32 systemd: Starting Hostname Service...
+Nov 10 09:06:57 ip-172-31-24-32 dbus[1814]: [system] Successfully activated service 'org.freedesktop.hostname1'
+Nov 10 09:06:57 ip-172-31-24-32 systemd: Started Hostname Service.
+Nov 10 09:06:57 ip-172-31-24-32 systemd-hostnamed: Changed static host name to 'ip-172-31-24-32.eu-west-1.compute.internal'
+Nov 10 09:06:57 ip-172-31-24-32 systemd-hostnamed: Changed host name to 'ip-172-31-24-32.eu-west-1.compute.internal'
+Nov 10 09:06:57 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 2220ms.
+Nov 10 09:06:58 ip-172-31-24-32 systemd: Started Initial cloud-init job (metadata service crawler).
+Nov 10 09:06:58 ip-172-31-24-32 systemd: Starting Permit User Sessions...
+Nov 10 09:06:58 ip-172-31-24-32 systemd: Reached target Cloud-config availability.
+Nov 10 09:06:58 ip-172-31-24-32 systemd: Reached target Network is Online.
+Nov 10 09:06:58 ip-172-31-24-32 systemd: Starting Apply the settings specified in cloud-config...
+Nov 10 09:06:58 ip-172-31-24-32 systemd: Started amazon-ssm-agent.
+Nov 10 09:06:58 ip-172-31-24-32 systemd: Starting Dynamically Generate Message Of The Day...
+Nov 10 09:06:58 ip-172-31-24-32 systemd: Starting System Logging Service...
+Nov 10 09:06:58 ip-172-31-24-32 systemd: Starting Finds and configures elastic network interfaces...
+Nov 10 09:06:58 ip-172-31-24-32 systemd: Starting Notify NFS peers of a restart...
+Nov 10 09:06:58 ip-172-31-24-32 systemd: Starting OpenSSH Server Key Generation...
+Nov 10 09:06:58 ip-172-31-24-32 ec2net: [ec2ifscan] Scanning for unconfigured interfaces
+Nov 10 09:06:58 ip-172-31-24-32 sm-notify[2297]: Version 1.3.0 starting
+Nov 10 09:06:58 ip-172-31-24-32 systemd: Started Permit User Sessions.
+Nov 10 09:06:58 ip-172-31-24-32 systemd: Started Notify NFS peers of a restart.
+Nov 10 09:06:58 ip-172-31-24-32 systemd: Started Finds and configures elastic network interfaces.
+Nov 10 09:06:58 ip-172-31-24-32 systemd: Started Job spooling tools.
+Nov 10 09:06:58 ip-172-31-24-32 systemd: Starting Wait for Plymouth Boot Screen to Quit...
+Nov 10 09:06:58 ip-172-31-24-32 systemd: Starting Terminate Plymouth Boot Screen...
+Nov 10 09:06:58 ip-172-31-24-32 systemd: Started Command Scheduler.
+Nov 10 09:06:58 ip-172-31-24-32 systemd: Received SIGRTMIN+21 from PID 1644 (plymouthd).
+Nov 10 09:06:58 ip-172-31-24-32 systemd: Started Wait for Plymouth Boot Screen to Quit.
+Nov 10 09:06:58 ip-172-31-24-32 systemd: Started Terminate Plymouth Boot Screen.
+Nov 10 09:06:58 ip-172-31-24-32 systemd: Started Serial Getty on ttyS0.
+Nov 10 09:06:58 ip-172-31-24-32 systemd: Started Getty on tty1.
+Nov 10 09:06:58 ip-172-31-24-32 systemd: Reached target Login Prompts.
+Nov 10 09:06:58 ip-172-31-24-32 rsyslogd: [origin software="rsyslogd" swVersion="8.24.0-52.amzn2" x-pid="2295" x-info="http://www.rsyslog.com"] start
+Nov 10 09:06:58 ip-172-31-24-32 systemd: Started System Logging Service.
+Nov 10 09:06:59 ip-172-31-24-32 sshd-keygen: Generating SSH2 RSA host key: [  OK  ]
+Nov 10 09:06:59 ip-172-31-24-32 sshd-keygen: Generating SSH2 ECDSA host key: [  OK  ]
+Nov 10 09:06:59 ip-172-31-24-32 sshd-keygen: Generating SSH2 ED25519 host key: [  OK  ]
+Nov 10 09:06:59 ip-172-31-24-32 systemd: Started OpenSSH Server Key Generation.
+Nov 10 09:06:59 ip-172-31-24-32 systemd: Starting EC2 Instance Connect Host Key Harvesting...
+Nov 10 09:06:59 ip-172-31-24-32 amazon-ssm-agent: Error occurred fetching the seelog config file path:  open /etc/amazon/ssm/seelog.xml: no such file or directory
+Nov 10 09:06:59 ip-172-31-24-32 amazon-ssm-agent: Initializing new seelog logger
+Nov 10 09:06:59 ip-172-31-24-32 amazon-ssm-agent: New Seelog Logger Creation Complete
+Nov 10 09:06:59 ip-172-31-24-32 amazon-ssm-agent: 2021-11-10 09:06:59 INFO Agent will take identity from EC2
+Nov 10 09:06:59 ip-172-31-24-32 amazon-ssm-agent: 2021-11-10 09:06:59 INFO [amazon-ssm-agent] using named pipe channel for IPC
+Nov 10 09:06:59 ip-172-31-24-32 cloud-init: Cloud-init v. 19.3-44.amzn2 running 'modules:config' at Wed, 10 Nov 2021 09:06:59 +0000. Up 13.76 seconds.
+Nov 10 09:06:59 ip-172-31-24-32 amazon-ssm-agent: 2021-11-10 09:06:59 INFO [amazon-ssm-agent] using named pipe channel for IPC
+Nov 10 09:06:59 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 4400ms.
+Nov 10 09:06:59 ip-172-31-24-32 amazon-ssm-agent: 2021-11-10 09:06:59 INFO [amazon-ssm-agent] using named pipe channel for IPC
+Nov 10 09:06:59 ip-172-31-24-32 systemd: Stopped OpenSSH Server Key Generation.
+Nov 10 09:06:59 ip-172-31-24-32 systemd: Stopping OpenSSH Server Key Generation...
+Nov 10 09:06:59 ip-172-31-24-32 systemd: Started EC2 Instance Connect Host Key Harvesting.
+Nov 10 09:06:59 ip-172-31-24-32 systemd: Starting OpenSSH server daemon...
+Nov 10 09:06:59 ip-172-31-24-32 amazon-ssm-agent: 2021-11-10 09:06:59 INFO [amazon-ssm-agent] amazon-ssm-agent - v3.0.1124.0
+Nov 10 09:06:59 ip-172-31-24-32 systemd: Started OpenSSH server daemon.
+Nov 10 09:06:59 ip-172-31-24-32 amazon-ssm-agent: 2021-11-10 09:06:59 INFO [amazon-ssm-agent] OS: linux, Arch: amd64
+Nov 10 09:07:00 ip-172-31-24-32 chronyd[1826]: Selected source 169.254.169.123
+Nov 10 09:07:00 ip-172-31-24-32 amazon-ssm-agent: 2021-11-10 09:07:00 INFO [amazon-ssm-agent] [LongRunningWorkerContainer] [WorkerProvider] Worker ssm-agent-worker is not running, starting worker process
+Nov 10 09:07:00 ip-172-31-24-32 amazon-ssm-agent: 2021-11-10 09:07:00 INFO [amazon-ssm-agent] [LongRunningWorkerContainer] [WorkerProvider] Worker ssm-agent-worker (pid:2469) started
+Nov 10 09:07:00 ip-172-31-24-32 amazon-ssm-agent: 2021-11-10 09:07:00 INFO [amazon-ssm-agent] [LongRunningWorkerContainer] Monitor long running worker health every 60 seconds
+Nov 10 09:07:02 ip-172-31-24-32 cloud-init: Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+Nov 10 09:07:03 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 8640ms.
+Nov 10 09:07:06 ip-172-31-24-32 cloud-init: --> 1:system-release-2-13.amzn2.x86_64 from installed removed (updateinfo)
+Nov 10 09:07:06 ip-172-31-24-32 cloud-init: --> glibc-2.26-55.amzn2.x86_64 from installed removed (updateinfo)
+Nov 10 09:07:06 ip-172-31-24-32 cloud-init: --> glibc-common-2.26-55.amzn2.x86_64 from installed removed (updateinfo)
+Nov 10 09:07:06 ip-172-31-24-32 cloud-init: --> aws-cfn-bootstrap-2.0-6.amzn2.noarch from installed removed (updateinfo)
+Nov 10 09:07:06 ip-172-31-24-32 cloud-init: --> glibc-all-langpacks-2.26-55.amzn2.x86_64 from installed removed (updateinfo)
+Nov 10 09:07:06 ip-172-31-24-32 cloud-init: --> ec2-instance-connect-1.1-14.amzn2.noarch from installed removed (updateinfo)
+Nov 10 09:07:06 ip-172-31-24-32 cloud-init: --> libcrypt-2.26-56.amzn2.x86_64 from amzn2-core removed (updateinfo)
+Nov 10 09:07:06 ip-172-31-24-32 cloud-init: --> dracut-config-ec2-2.0-1.amzn2.noarch from installed removed (updateinfo)
+Nov 10 09:07:06 ip-172-31-24-32 cloud-init: --> 1:openssl-1.0.2k-19.amzn2.0.10.x86_64 from amzn2-core removed (updateinfo)
+Nov 10 09:07:06 ip-172-31-24-32 cloud-init: --> glibc-minimal-langpack-2.26-55.amzn2.x86_64 from installed removed (updateinfo)
+Nov 10 09:07:06 ip-172-31-24-32 cloud-init: --> 1:system-release-2-14.amzn2.x86_64 from amzn2-core removed (updateinfo)
+Nov 10 09:07:06 ip-172-31-24-32 cloud-init: --> 1:openssl-libs-1.0.2k-19.amzn2.0.10.x86_64 from amzn2-core removed (updateinfo)
+Nov 10 09:07:06 ip-172-31-24-32 cloud-init: --> 1:openssl-libs-1.0.2k-19.amzn2.0.8.x86_64 from installed removed (updateinfo)
+Nov 10 09:07:06 ip-172-31-24-32 cloud-init: --> kpatch-runtime-0.9.2-4.amzn2.noarch from installed removed (updateinfo)
+Nov 10 09:07:06 ip-172-31-24-32 cloud-init: --> dracut-config-ec2-2.0-2.amzn2.noarch from amzn2-core removed (updateinfo)
+Nov 10 09:07:06 ip-172-31-24-32 cloud-init: --> glibc-minimal-langpack-2.26-56.amzn2.x86_64 from amzn2-core removed (updateinfo)
+Nov 10 09:07:06 ip-172-31-24-32 cloud-init: --> glibc-2.26-56.amzn2.x86_64 from amzn2-core removed (updateinfo)
+Nov 10 09:07:06 ip-172-31-24-32 cloud-init: --> ec2-instance-connect-1.1-15.amzn2.noarch from amzn2-core removed (updateinfo)
+Nov 10 09:07:06 ip-172-31-24-32 cloud-init: --> kpatch-runtime-0.9.4-2.amzn2.noarch from amzn2-core removed (updateinfo)
+Nov 10 09:07:06 ip-172-31-24-32 cloud-init: --> glibc-all-langpacks-2.26-56.amzn2.x86_64 from amzn2-core removed (updateinfo)
+Nov 10 09:07:06 ip-172-31-24-32 cloud-init: --> 1:openssl-1.0.2k-19.amzn2.0.8.x86_64 from installed removed (updateinfo)
+Nov 10 09:07:06 ip-172-31-24-32 cloud-init: --> glibc-locale-source-2.26-55.amzn2.x86_64 from installed removed (updateinfo)
+Nov 10 09:07:06 ip-172-31-24-32 cloud-init: --> aws-cfn-bootstrap-2.0-9.amzn2.noarch from amzn2-core removed (updateinfo)
+Nov 10 09:07:06 ip-172-31-24-32 cloud-init: --> libcrypt-2.26-55.amzn2.x86_64 from installed removed (updateinfo)
+Nov 10 09:07:06 ip-172-31-24-32 cloud-init: --> glibc-locale-source-2.26-56.amzn2.x86_64 from amzn2-core removed (updateinfo)
+Nov 10 09:07:06 ip-172-31-24-32 cloud-init: --> glibc-common-2.26-56.amzn2.x86_64 from amzn2-core removed (updateinfo)
+Nov 10 09:07:06 ip-172-31-24-32 cloud-init: 1 package(s) needed (+0 related) for security, out of 14 available
+Nov 10 09:07:06 ip-172-31-24-32 cloud-init: Resolving Dependencies
+Nov 10 09:07:06 ip-172-31-24-32 cloud-init: --> Running transaction check
+Nov 10 09:07:06 ip-172-31-24-32 cloud-init: ---> Package kernel-tools.x86_64 0:4.14.248-189.473.amzn2 will be updated
+Nov 10 09:07:06 ip-172-31-24-32 cloud-init: ---> Package kernel-tools.x86_64 0:4.14.252-195.483.amzn2 will be an update
+Nov 10 09:07:07 ip-172-31-24-32 cloud-init: --> Finished Dependency Resolution
+Nov 10 09:07:07 ip-172-31-24-32 cloud-init: Dependencies Resolved
+Nov 10 09:07:07 ip-172-31-24-32 cloud-init: ================================================================================
+Nov 10 09:07:07 ip-172-31-24-32 cloud-init: Package          Arch       Version                       Repository      Size
+Nov 10 09:07:07 ip-172-31-24-32 cloud-init: ================================================================================
+Nov 10 09:07:07 ip-172-31-24-32 cloud-init: Updating:
+Nov 10 09:07:07 ip-172-31-24-32 cloud-init: kernel-tools     x86_64     4.14.252-195.483.amzn2        amzn2-core     155 k
+Nov 10 09:07:07 ip-172-31-24-32 cloud-init: Transaction Summary
+Nov 10 09:07:07 ip-172-31-24-32 cloud-init: ================================================================================
+Nov 10 09:07:07 ip-172-31-24-32 cloud-init: Upgrade  1 Package
+Nov 10 09:07:07 ip-172-31-24-32 cloud-init: Total download size: 155 k
+Nov 10 09:07:07 ip-172-31-24-32 cloud-init: Downloading packages:
+Nov 10 09:07:07 ip-172-31-24-32 cloud-init: Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
+Nov 10 09:07:07 ip-172-31-24-32 cloud-init: Running transaction check
+Nov 10 09:07:07 ip-172-31-24-32 cloud-init: Running transaction test
+Nov 10 09:07:07 ip-172-31-24-32 cloud-init: Transaction test succeeded
+Nov 10 09:07:07 ip-172-31-24-32 cloud-init: Running transaction
+Nov 10 09:07:09 ip-172-31-24-32 yum[2457]: Updated: kernel-tools-4.14.252-195.483.amzn2.x86_64
+Nov 10 09:07:09 ip-172-31-24-32 cloud-init: Updating   : kernel-tools-4.14.252-195.483.amzn2.x86_64                   1/2
+Nov 10 09:07:09 ip-172-31-24-32 cloud-init: Cleanup    : kernel-tools-4.14.248-189.473.amzn2.x86_64                   2/2
+Nov 10 09:07:09 ip-172-31-24-32 systemd: update-motd.service: main process exited, code=killed, status=15/TERM
+Nov 10 09:07:09 ip-172-31-24-32 systemd: Stopped Dynamically Generate Message Of The Day.
+Nov 10 09:07:09 ip-172-31-24-32 systemd: Unit update-motd.service entered failed state.
+Nov 10 09:07:09 ip-172-31-24-32 systemd: update-motd.service failed.
+Nov 10 09:07:09 ip-172-31-24-32 systemd: Starting Dynamically Generate Message Of The Day...
+Nov 10 09:07:09 ip-172-31-24-32 cloud-init: Verifying  : kernel-tools-4.14.252-195.483.amzn2.x86_64                   1/2
+Nov 10 09:07:09 ip-172-31-24-32 cloud-init: Verifying  : kernel-tools-4.14.248-189.473.amzn2.x86_64                   2/2
+Nov 10 09:07:09 ip-172-31-24-32 cloud-init: Updated:
+Nov 10 09:07:09 ip-172-31-24-32 cloud-init: kernel-tools.x86_64 0:4.14.252-195.483.amzn2
+Nov 10 09:07:09 ip-172-31-24-32 cloud-init: Complete!
+Nov 10 09:07:10 ip-172-31-24-32 systemd: Started Apply the settings specified in cloud-config.
+Nov 10 09:07:10 ip-172-31-24-32 systemd: Starting Execute cloud user/final scripts...
+Nov 10 09:07:10 ip-172-31-24-32 systemd: Starting Initial hibernation setup job...
+Nov 10 09:07:10 ip-172-31-24-32 hibinit-agent: Effective config: {'grub_update': True, 'swap_percentage': 100, 'log_to_syslog': True, 'touch_swap': False, 'state_dir': '/var/lib/hibinit-agent', 'swapoff': 'swapoff {swapfile}', 'mkswap': 'mkswap {swapfile}', 'swapon': 'swapon {swapfile}', 'swap_mb': 4000}
+Nov 10 09:07:10 ip-172-31-24-32 hibinit-agent: Requesting new IMDSv2 token.
+Nov 10 09:07:10 ip-172-31-24-32 hibinit-agent: Instance Launch has not enabled Hibernation Configured Flag. hibinit-agent exiting!!
+Nov 10 09:07:10 ip-172-31-24-32 systemd: Stopping ACPI Event Daemon...
+Nov 10 09:07:10 ip-172-31-24-32 acpid: exiting
+Nov 10 09:07:10 ip-172-31-24-32 systemd: Stopped ACPI Event Daemon.
+Nov 10 09:07:10 ip-172-31-24-32 systemd: Starting ACPI Event Daemon...
+Nov 10 09:07:10 ip-172-31-24-32 systemd: Started ACPI Event Daemon.
+Nov 10 09:07:10 ip-172-31-24-32 systemd: Started Initial hibernation setup job.
+Nov 10 09:07:10 ip-172-31-24-32 acpid: starting up with netlink and the input layer
+Nov 10 09:07:10 ip-172-31-24-32 acpid: skipping incomplete file /etc/acpi/events/videoconf
+Nov 10 09:07:10 ip-172-31-24-32 acpid: 2 rules loaded
+Nov 10 09:07:10 ip-172-31-24-32 acpid: waiting for events: event logging is off
+Nov 10 09:07:11 ip-172-31-24-32 cloud-init: Cloud-init v. 19.3-44.amzn2 running 'modules:final' at Wed, 10 Nov 2021 09:07:10 +0000. Up 25.41 seconds.
+Nov 10 09:07:11 ip-172-31-24-32 ec2: 
+Nov 10 09:07:11 ip-172-31-24-32 ec2: #############################################################
+Nov 10 09:07:11 ip-172-31-24-32 ec2: -----BEGIN SSH HOST KEY FINGERPRINTS-----
+Nov 10 09:07:11 ip-172-31-24-32 ec2: 256 SHA256:FimetDR5hkmJK+AXm5oXM+lF1FJlKfXnd9kg8jLN7Hc no comment (ECDSA)
+Nov 10 09:07:11 ip-172-31-24-32 ec2: 256 SHA256:/zQiR+Btq9OD0JyOZ9rNK6g7Qc+9/dy5OvH04JLM3RM no comment (ED25519)
+Nov 10 09:07:11 ip-172-31-24-32 ec2: 2048 SHA256:O0vjK3dufDgEhTzdjKIKjhB8uwMIi3LdMzW325ek3uA no comment (RSA)
+Nov 10 09:07:11 ip-172-31-24-32 ec2: -----END SSH HOST KEY FINGERPRINTS-----
+Nov 10 09:07:11 ip-172-31-24-32 ec2: #############################################################
+Nov 10 09:07:11 ip-172-31-24-32 cloud-init: Cloud-init v. 19.3-44.amzn2 finished at Wed, 10 Nov 2021 09:07:11 +0000. Datasource DataSourceEc2.  Up 25.65 seconds
+Nov 10 09:07:11 ip-172-31-24-32 systemd: Started Execute cloud user/final scripts.
+Nov 10 09:07:12 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 17430ms.
+Nov 10 09:07:15 ip-172-31-24-32 systemd: Started Dynamically Generate Message Of The Day.
+Nov 10 09:07:15 ip-172-31-24-32 systemd: Reached target Multi-User System.
+Nov 10 09:07:15 ip-172-31-24-32 systemd: Reached target Graphical Interface.
+Nov 10 09:07:15 ip-172-31-24-32 systemd: Reached target Cloud-init target.
+Nov 10 09:07:15 ip-172-31-24-32 systemd: Starting Update UTMP about System Runlevel Changes...
+Nov 10 09:07:15 ip-172-31-24-32 systemd: Started Update UTMP about System Runlevel Changes.
+Nov 10 09:07:15 ip-172-31-24-32 systemd: Startup finished in 1.131s (kernel) + 2.040s (initrd) + 26.327s (userspace) = 29.499s.
+Nov 10 09:07:30 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 36310ms.
+Nov 10 09:08:06 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 74630ms.
+Nov 10 09:09:21 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 113920ms.
+Nov 10 09:09:39 ip-172-31-24-32 systemd: Created slice User Slice of ec2-user.
+Nov 10 09:09:39 ip-172-31-24-32 systemd-logind: New session 1 of user ec2-user.
+Nov 10 09:09:39 ip-172-31-24-32 systemd: Started Session 1 of user ec2-user.
+Nov 10 09:09:40 ip-172-31-24-32 systemd: Started Session 2 of user ec2-user.
+Nov 10 09:09:40 ip-172-31-24-32 systemd-logind: New session 2 of user ec2-user.
+Nov 10 09:09:42 ip-172-31-24-32 su: (to root) ec2-user on pts/0
+Nov 10 09:09:51 ip-172-31-24-32 yum[2687]: Updated: glibc-common-2.26-56.amzn2.x86_64
+Nov 10 09:09:51 ip-172-31-24-32 systemd: Stopping Command Scheduler...
+Nov 10 09:09:51 ip-172-31-24-32 systemd: Stopped Command Scheduler.
+Nov 10 09:09:51 ip-172-31-24-32 systemd: Started Command Scheduler.
+Nov 10 09:09:51 ip-172-31-24-32 yum[2687]: Updated: glibc-2.26-56.amzn2.x86_64
+Nov 10 09:09:51 ip-172-31-24-32 yum[2687]: Updated: glibc-minimal-langpack-2.26-56.amzn2.x86_64
+Nov 10 09:09:51 ip-172-31-24-32 yum[2687]: Updated: 1:openssl-libs-1.0.2k-19.amzn2.0.10.x86_64
+Nov 10 09:09:51 ip-172-31-24-32 yum[2687]: Updated: 1:openssl-1.0.2k-19.amzn2.0.10.x86_64
+Nov 10 09:09:51 ip-172-31-24-32 systemd: Reloading.
+Nov 10 09:09:52 ip-172-31-24-32 systemd: Starting EC2 Instance Connect Host Key Harvesting...
+Nov 10 09:09:52 ip-172-31-24-32 systemd: Started EC2 Instance Connect Host Key Harvesting.
+Nov 10 09:09:52 ip-172-31-24-32 systemd: Reloading.
+Nov 10 09:09:52 ip-172-31-24-32 systemd: Stopping OpenSSH server daemon...
+Nov 10 09:09:52 ip-172-31-24-32 systemd: Stopped OpenSSH server daemon.
+Nov 10 09:09:52 ip-172-31-24-32 systemd: Starting OpenSSH server daemon...
+Nov 10 09:09:52 ip-172-31-24-32 systemd: Started OpenSSH server daemon.
+Nov 10 09:09:52 ip-172-31-24-32 yum[2687]: Updated: ec2-instance-connect-1.1-15.amzn2.noarch
+Nov 10 09:09:52 ip-172-31-24-32 yum[2687]: Updated: libcrypt-2.26-56.amzn2.x86_64
+Nov 10 09:09:54 ip-172-31-24-32 yum[2687]: Updated: glibc-all-langpacks-2.26-56.amzn2.x86_64
+Nov 10 09:09:55 ip-172-31-24-32 yum[2687]: Updated: glibc-locale-source-2.26-56.amzn2.x86_64
+Nov 10 09:09:55 ip-172-31-24-32 yum[2687]: Updated: aws-cfn-bootstrap-2.0-9.amzn2.noarch
+Nov 10 09:09:55 ip-172-31-24-32 yum[2687]: Updated: kpatch-runtime-0.9.4-2.amzn2.noarch
+Nov 10 09:09:55 ip-172-31-24-32 yum[2687]: Updated: dracut-config-ec2-2.0-2.amzn2.noarch
+Nov 10 09:09:55 ip-172-31-24-32 yum[2687]: Updated: 1:system-release-2-14.amzn2.x86_64
+Nov 10 09:09:58 ip-172-31-24-32 yum[2687]: Installed: kernel-4.14.252-195.483.amzn2.x86_64
+Nov 10 09:09:58 ip-172-31-24-32 systemd: Reloading.
+Nov 10 09:10:01 ip-172-31-24-32 dracut: dracut-033-535.amzn2.1.4
+Nov 10 09:10:01 ip-172-31-24-32 dracut: Executing: /sbin/dracut -f /boot/initramfs-4.14.252-195.483.amzn2.x86_64.img 4.14.252-195.483.amzn2.x86_64
+Nov 10 09:10:01 ip-172-31-24-32 dracut: dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
+Nov 10 09:10:01 ip-172-31-24-32 dracut: dracut module 'i18n' will not be installed, because it's in the list to be omitted!
+Nov 10 09:10:01 ip-172-31-24-32 dracut: dracut module 'plymouth' will not be installed, because it's in the list to be omitted!
+Nov 10 09:10:01 ip-172-31-24-32 dracut: dracut module 'btrfs' will not be installed, because command 'btrfs' could not be found!
+Nov 10 09:10:01 ip-172-31-24-32 dracut: dracut module 'crypt' will not be installed, because it's in the list to be omitted!
+Nov 10 09:10:01 ip-172-31-24-32 dracut: dracut module 'dm' will not be installed, because it's in the list to be omitted!
+Nov 10 09:10:01 ip-172-31-24-32 dracut: dracut module 'dmraid' will not be installed, because it's in the list to be omitted!
+Nov 10 09:10:01 ip-172-31-24-32 dracut: dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
+Nov 10 09:10:01 ip-172-31-24-32 dracut: dracut module 'kernel-modules' will not be installed, because it's in the list to be omitted!
+Nov 10 09:10:01 ip-172-31-24-32 dracut: dracut module 'lvm' will not be installed, because it's in the list to be omitted!
+Nov 10 09:10:01 ip-172-31-24-32 dracut: dracut module 'mdraid' will not be installed, because it's in the list to be omitted!
+Nov 10 09:10:01 ip-172-31-24-32 dracut: dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
+Nov 10 09:10:01 ip-172-31-24-32 dracut: dracut module 'qemu' will not be installed, because it's in the list to be omitted!
+Nov 10 09:10:01 ip-172-31-24-32 dracut: dracut module 'terminfo' will not be installed, because it's in the list to be omitted!
+Nov 10 09:10:01 ip-172-31-24-32 dracut: dracut module 'biosdevname' will not be installed, because command 'biosdevname' could not be found!
+Nov 10 09:10:01 ip-172-31-24-32 dracut: dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
+Nov 10 09:10:01 ip-172-31-24-32 dracut: dracut module 'btrfs' will not be installed, because command 'btrfs' could not be found!
+Nov 10 09:10:01 ip-172-31-24-32 dracut: dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
+Nov 10 09:10:01 ip-172-31-24-32 dracut: dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
+Nov 10 09:10:01 ip-172-31-24-32 dracut: *** Including module: bash ***
+Nov 10 09:10:01 ip-172-31-24-32 dracut: *** Including module: modsign ***
+Nov 10 09:10:01 ip-172-31-24-32 systemd: Created slice User Slice of root.
+Nov 10 09:10:01 ip-172-31-24-32 systemd: Started Session 3 of user root.
+Nov 10 09:10:01 ip-172-31-24-32 dracut: *** Including module: nss-softokn ***
+Nov 10 09:10:01 ip-172-31-24-32 systemd: Removed slice User Slice of root.
+Nov 10 09:10:01 ip-172-31-24-32 dracut: *** Including module: bcache ***
+Nov 10 09:10:01 ip-172-31-24-32 dracut: Skipping udev rule: 61-bcache.rules
+Nov 10 09:10:01 ip-172-31-24-32 dracut: Skipping udev rule: 69-bcache.rules
+Nov 10 09:10:01 ip-172-31-24-32 dracut: *** Including module: resume ***
+Nov 10 09:10:01 ip-172-31-24-32 dracut: *** Including module: rootfs-block ***
+Nov 10 09:10:01 ip-172-31-24-32 dracut: *** Including module: udev-rules ***
+Nov 10 09:10:01 ip-172-31-24-32 dracut: Skipping udev rule: 40-redhat-cpu-hotplug.rules
+Nov 10 09:10:02 ip-172-31-24-32 dracut: Skipping udev rule: 91-permissions.rules
+Nov 10 09:10:02 ip-172-31-24-32 dracut: *** Including module: systemd ***
+Nov 10 09:10:02 ip-172-31-24-32 dracut: *** Including module: usrmount ***
+Nov 10 09:10:02 ip-172-31-24-32 dracut: *** Including module: base ***
+Nov 10 09:10:02 ip-172-31-24-32 dracut: *** Including module: fs-lib ***
+Nov 10 09:10:02 ip-172-31-24-32 dracut: *** Including module: microcode_ctl-fw_dir_override ***
+Nov 10 09:10:02 ip-172-31-24-32 dracut:  microcode_ctl module: mangling fw_dir
+Nov 10 09:10:02 ip-172-31-24-32 dracut:    microcode_ctl: processing data directory  "/usr/share/microcode_ctl/ucode_with_caveats/intel"...
+Nov 10 09:10:02 ip-172-31-24-32 dracut:      microcode_ctl: intel: caveats check for kernel version "4.14.252-195.483.amzn2.x86_64" passed, adding "/usr/share/microcode_ctl/ucode_with_caveats/intel" to fw_dir variable
+Nov 10 09:10:02 ip-172-31-24-32 dracut:    microcode_ctl: processing data directory  "/usr/share/microcode_ctl/ucode_with_caveats/intel-06-4f-01"...
+Nov 10 09:10:02 ip-172-31-24-32 dracut:      microcode_ctl: intel-06-4f-01: caveats check for kernel version "4.14.252-195.483.amzn2.x86_64" passed, adding "/usr/share/microcode_ctl/ucode_with_caveats/intel-06-4f-01" to fw_dir variable
+Nov 10 09:10:02 ip-172-31-24-32 dracut:    microcode_ctl: final fw_dir: "/usr/share/microcode_ctl/ucode_with_caveats/intel-06-4f-01 /usr/share/microcode_ctl/ucode_with_caveats/intel /lib/firmware/updates /lib/firmware"
+Nov 10 09:10:02 ip-172-31-24-32 dracut: *** Including module: shutdown ***
+Nov 10 09:10:02 ip-172-31-24-32 dracut: *** Including modules done ***
+Nov 10 09:10:03 ip-172-31-24-32 dracut: *** Installing kernel module dependencies and firmware ***
+Nov 10 09:10:03 ip-172-31-24-32 dracut: *** Installing kernel module dependencies and firmware done ***
+Nov 10 09:10:03 ip-172-31-24-32 dracut: *** Resolving executable dependencies ***
+Nov 10 09:10:03 ip-172-31-24-32 dracut: *** Resolving executable dependencies done***
+Nov 10 09:10:03 ip-172-31-24-32 dracut: *** Hardlinking files ***
+Nov 10 09:10:03 ip-172-31-24-32 dracut: *** Hardlinking files done ***
+Nov 10 09:10:03 ip-172-31-24-32 dracut: *** Stripping files ***
+Nov 10 09:10:03 ip-172-31-24-32 dracut: *** Stripping files done ***
+Nov 10 09:10:03 ip-172-31-24-32 dracut: *** Generating early-microcode cpio image contents ***
+Nov 10 09:10:03 ip-172-31-24-32 dracut: *** Constructing GenuineIntel.bin ****
+Nov 10 09:10:03 ip-172-31-24-32 dracut: *** Constructing GenuineIntel.bin ****
+Nov 10 09:10:04 ip-172-31-24-32 dracut: *** Constructing GenuineIntel.bin ****
+Nov 10 09:10:04 ip-172-31-24-32 dracut: *** Store current command line parameters ***
+Nov 10 09:10:04 ip-172-31-24-32 dracut: *** Creating image file ***
+Nov 10 09:10:04 ip-172-31-24-32 dracut: *** Creating microcode section ***
+Nov 10 09:10:04 ip-172-31-24-32 dracut: *** Created microcode section ***
+Nov 10 09:10:04 ip-172-31-24-32 dracut: *** Creating image file done ***
+Nov 10 09:10:06 ip-172-31-24-32 dracut: *** Creating initramfs image file '/boot/initramfs-4.14.252-195.483.amzn2.x86_64.img' done ***
+Nov 10 09:10:06 ip-172-31-24-32 systemd: Stopped Dynamically Generate Message Of The Day.
+Nov 10 09:10:06 ip-172-31-24-32 systemd: Stopping Dynamically Generate Message Of The Day...
+Nov 10 09:10:06 ip-172-31-24-32 systemd: Starting Dynamically Generate Message Of The Day...
+Nov 10 09:10:10 ip-172-31-24-32 systemd: Started Dynamically Generate Message Of The Day.
+Nov 10 09:11:15 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 128370ms.
+Nov 10 09:13:23 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 115300ms.
+Nov 10 09:15:18 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 127650ms.
+Nov 10 09:17:26 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 118060ms.
+Nov 10 09:19:24 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 121410ms.
+Nov 10 09:20:01 ip-172-31-24-32 systemd: Created slice User Slice of root.
+Nov 10 09:20:01 ip-172-31-24-32 systemd: Started Session 4 of user root.
+Nov 10 09:20:01 ip-172-31-24-32 systemd: Removed slice User Slice of root.
+Nov 10 09:21:26 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 129420ms.
+Nov 10 09:22:32 ip-172-31-24-32 systemd: Starting Cleanup of Temporary Directories...
+Nov 10 09:22:32 ip-172-31-24-32 systemd: Started Cleanup of Temporary Directories.
+Nov 10 09:23:35 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 122310ms.
+Nov 10 09:25:38 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 130530ms.
+Nov 10 09:27:48 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 130640ms.
+Nov 10 09:29:59 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 121080ms.
+Nov 10 09:30:01 ip-172-31-24-32 systemd: Created slice User Slice of root.
+Nov 10 09:30:01 ip-172-31-24-32 systemd: Started Session 5 of user root.
+Nov 10 09:30:01 ip-172-31-24-32 systemd: Removed slice User Slice of root.
+Nov 10 09:32:00 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 108200ms.
+Nov 10 09:32:12 ip-172-31-24-32 dhclient[2046]: DHCPREQUEST on eth0 to 172.31.16.1 port 67 (xid=0x312d99eb)
+Nov 10 09:32:12 ip-172-31-24-32 dhclient[2046]: DHCPACK from 172.31.16.1 (xid=0x312d99eb)
+Nov 10 09:32:12 ip-172-31-24-32 dhclient[2046]: bound to 172.31.24.32 -- renewal in 1503 seconds.
+Nov 10 09:32:12 ip-172-31-24-32 ec2net: [get_meta] Querying IMDS for meta-data/network/interfaces/macs/06:9e:f0:c4:30:6b/local-ipv4s
+Nov 10 09:32:12 ip-172-31-24-32 ec2net: [get_meta] Getting token for IMDSv2.
+Nov 10 09:32:12 ip-172-31-24-32 ec2net: [get_meta] Trying to get http://169.254.169.254/latest/meta-data/network/interfaces/macs/06:9e:f0:c4:30:6b/local-ipv4s
+Nov 10 09:32:12 ip-172-31-24-32 ec2net: [remove_aliases] Removing aliases of eth0
+Nov 10 09:33:48 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 110250ms.
+Nov 10 09:35:39 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 122800ms.
+Nov 10 09:37:42 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 111620ms.
+Nov 10 09:39:33 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 121670ms.
+Nov 10 09:40:01 ip-172-31-24-32 systemd: Created slice User Slice of root.
+Nov 10 09:40:01 ip-172-31-24-32 systemd: Started Session 6 of user root.
+Nov 10 09:40:01 ip-172-31-24-32 systemd: Removed slice User Slice of root.
+Nov 10 09:41:35 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 120500ms.
+Nov 10 09:43:36 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 118850ms.
+Nov 10 09:45:32 ip-172-31-24-32 yum[5971]: Installed: git-core-2.32.0-1.amzn2.0.1.x86_64
+Nov 10 09:45:33 ip-172-31-24-32 yum[5971]: Installed: git-core-doc-2.32.0-1.amzn2.0.1.noarch
+Nov 10 09:45:33 ip-172-31-24-32 yum[5971]: Installed: 1:perl-Error-0.17020-2.amzn2.noarch
+Nov 10 09:45:33 ip-172-31-24-32 yum[5971]: Installed: 1:emacs-filesystem-27.2-4.amzn2.0.1.noarch
+Nov 10 09:45:33 ip-172-31-24-32 yum[5971]: Installed: perl-TermReadKey-2.30-20.amzn2.0.2.x86_64
+Nov 10 09:45:33 ip-172-31-24-32 yum[5971]: Installed: perl-Git-2.32.0-1.amzn2.0.1.noarch
+Nov 10 09:45:33 ip-172-31-24-32 yum[5971]: Installed: git-2.32.0-1.amzn2.0.1.x86_64
+Nov 10 09:45:33 ip-172-31-24-32 systemd: Stopped Dynamically Generate Message Of The Day.
+Nov 10 09:45:33 ip-172-31-24-32 systemd: Stopping Dynamically Generate Message Of The Day...
+Nov 10 09:45:33 ip-172-31-24-32 systemd: Starting Dynamically Generate Message Of The Day...
+Nov 10 09:45:34 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 113070ms.
+Nov 10 09:45:37 ip-172-31-24-32 systemd: Started Dynamically Generate Message Of The Day.
+Nov 10 09:47:28 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 112640ms.
+Nov 10 09:49:20 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 131590ms.
+Nov 10 09:50:01 ip-172-31-24-32 systemd: Created slice User Slice of root.
+Nov 10 09:50:01 ip-172-31-24-32 systemd: Started Session 7 of user root.
+Nov 10 09:50:02 ip-172-31-24-32 systemd: Removed slice User Slice of root.
+Nov 10 09:51:32 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 115520ms.
+Nov 10 09:53:27 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 130270ms.
+Nov 10 09:55:38 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 129460ms.
+Nov 10 09:57:15 ip-172-31-24-32 dhclient[2046]: DHCPREQUEST on eth0 to 172.31.16.1 port 67 (xid=0x312d99eb)
+Nov 10 09:57:15 ip-172-31-24-32 dhclient[2046]: DHCPACK from 172.31.16.1 (xid=0x312d99eb)
+Nov 10 09:57:15 ip-172-31-24-32 dhclient[2046]: bound to 172.31.24.32 -- renewal in 1692 seconds.
+Nov 10 09:57:15 ip-172-31-24-32 ec2net: [get_meta] Querying IMDS for meta-data/network/interfaces/macs/06:9e:f0:c4:30:6b/local-ipv4s
+Nov 10 09:57:15 ip-172-31-24-32 ec2net: [get_meta] Getting token for IMDSv2.
+Nov 10 09:57:15 ip-172-31-24-32 ec2net: [get_meta] Trying to get http://169.254.169.254/latest/meta-data/network/interfaces/macs/06:9e:f0:c4:30:6b/local-ipv4s
+Nov 10 09:57:15 ip-172-31-24-32 ec2net: [remove_aliases] Removing aliases of eth0
+Nov 10 09:57:47 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 113240ms.
+Nov 10 09:59:41 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 130080ms.
+Nov 10 10:00:01 ip-172-31-24-32 systemd: Created slice User Slice of root.
+Nov 10 10:00:01 ip-172-31-24-32 systemd: Started Session 8 of user root.
+Nov 10 10:00:01 ip-172-31-24-32 systemd: Removed slice User Slice of root.
+Nov 10 10:01:01 ip-172-31-24-32 systemd: Created slice User Slice of root.
+Nov 10 10:01:01 ip-172-31-24-32 systemd: Started Session 9 of user root.
+Nov 10 10:01:51 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 125170ms.
+Nov 10 10:03:56 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 124120ms.
+Nov 10 10:06:00 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 115290ms.
+Nov 10 10:07:56 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 129270ms.
+Nov 10 10:10:01 ip-172-31-24-32 systemd: Started Session 10 of user root.
+Nov 10 10:10:05 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 126360ms.
+Nov 10 10:12:11 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 112320ms.
+Nov 10 10:14:04 ip-172-31-24-32 dhclient[2091]: XMT: Solicit on eth0, interval 112860ms.
